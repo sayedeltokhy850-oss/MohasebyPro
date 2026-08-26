@@ -3248,7 +3248,8 @@ alert(
 function render(){
 
 nav();
-
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#172554">
 
 let html="";
 
@@ -3260,7 +3261,20 @@ html=dashboard();
 }
 
 
-else if(section==="customers"){
+else if(section==="customers"){<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function () {
+    navigator.serviceWorker.register("./sw.js")
+      .then(function () {
+        console.log("تم تشغيل التطبيق");
+      })
+      .catch(function (error) {
+        console.log("Service Worker Error:", error);
+      });
+  });
+}
+</script>
+   
 
 html=entityPage("customers");
 
