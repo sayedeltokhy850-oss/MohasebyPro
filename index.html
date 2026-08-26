@@ -9,222 +9,142 @@
 <style>
 *{box-sizing:border-box}
 body{
-  margin:0;
-  font-family:Arial,Tahoma,sans-serif;
-  background:#f1f5f9;
-  color:#172033;
+margin:0;
+font-family:Arial,Tahoma,sans-serif;
+background:#f1f5f9;
+color:#172033
 }
 header{
-  background:#172554;
-  color:white;
-  padding:16px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:10px;
-  position:sticky;
-  top:0;
-  z-index:20;
+background:#172554;
+color:white;
+padding:16px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:10px;
+position:sticky;
+top:0;
+z-index:20
 }
-.logo{
-  font-size:23px;
-  font-weight:bold;
-}
-.subtitle{
-  font-size:13px;
-  opacity:.8;
-}
+.logo{font-size:23px;font-weight:bold}
+.subtitle{font-size:13px;opacity:.8}
 .menuBtn{
-  background:#fff;
-  color:#172554;
-  border:0;
-  border-radius:10px;
-  padding:10px 14px;
-  font-size:20px;
+background:#fff;color:#172554;border:0;border-radius:10px;
+padding:10px 14px;font-size:20px
 }
-.layout{
-  display:flex;
-  min-height:calc(100vh - 70px);
-}
+.layout{display:flex;min-height:calc(100vh - 70px)}
 aside{
-  width:245px;
-  background:#0f172a;
-  color:white;
-  padding:12px;
-  position:fixed;
-  right:0;
-  top:70px;
-  bottom:0;
-  overflow:auto;
-  z-index:15;
+width:245px;background:#0f172a;color:white;padding:12px;
+position:fixed;right:0;top:70px;bottom:0;
+overflow:auto;z-index:15
 }
 main{
-  margin-right:245px;
-  width:calc(100% - 245px);
-  padding:18px;
+margin-right:245px;width:calc(100% - 245px);padding:18px
 }
 .navTitle{
-  color:#94a3b8;
-  font-size:13px;
-  margin:12px 8px 7px;
+color:#94a3b8;font-size:13px;margin:12px 8px 7px
 }
 nav button{
-  width:100%;
-  border:0;
-  background:transparent;
-  color:#e2e8f0;
-  text-align:right;
-  padding:12px;
-  border-radius:8px;
-  margin-bottom:3px;
-  cursor:pointer;
-  font-size:14px;
+width:100%;border:0;background:transparent;color:#e2e8f0;
+text-align:right;padding:12px;border-radius:8px;margin-bottom:3px;
+cursor:pointer;font-size:14px
 }
-nav button:hover,
-nav button.active{
-  background:#1e3a8a;
-  color:white;
+nav button:hover,nav button.active{
+background:#1e3a8a;color:white
 }
 .card{
-  background:white;
-  border-radius:14px;
-  padding:18px;
-  margin-bottom:16px;
-  box-shadow:0 2px 10px #0000000d;
+background:white;border-radius:14px;padding:18px;margin-bottom:16px;
+box-shadow:0 2px 10px #0000000d
 }
-h2{
-  margin-top:0;
-  color:#172554;
-}
+h2{margin-top:0;color:#172554}
 .grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:14px;
+display:grid;grid-template-columns:repeat(4,1fr);gap:14px
 }
 .stat{
-  background:white;
-  padding:18px;
-  border-radius:14px;
-  box-shadow:0 2px 10px #0000000d;
+background:white;padding:18px;border-radius:14px;
+box-shadow:0 2px 10px #0000000d
 }
 .stat b{
-  display:block;
-  font-size:24px;
-  margin-top:8px;
-  color:#172554;
+display:block;font-size:24px;margin-top:8px;color:#172554
 }
 input,select,textarea{
-  width:100%;
-  padding:11px;
-  border:1px solid #cbd5e1;
-  border-radius:8px;
-  font-size:14px;
-  background:white;
+width:100%;padding:11px;border:1px solid #cbd5e1;
+border-radius:8px;font-size:14px;background:white
 }
 label{
-  display:block;
-  font-size:13px;
-  margin-bottom:6px;
-  font-weight:bold;
+display:block;font-size:13px;margin-bottom:6px;font-weight:bold
 }
 .formGrid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:12px;
+display:grid;grid-template-columns:repeat(3,1fr);gap:12px
 }
-button{
-  cursor:pointer;
-}
+button{cursor:pointer}
 .btn{
-  border:0;
-  border-radius:8px;
-  padding:11px 16px;
-  font-weight:bold;
+border:0;border-radius:8px;padding:11px 16px;font-weight:bold
 }
 .primary{background:#172554;color:white}
 .success{background:#15803d;color:white}
 .danger{background:#b91c1c;color:white}
 .gray{background:#e2e8f0;color:#172033}
 .info{background:#0369a1;color:white}
+.warning{background:#d97706;color:white}
 table{
-  width:100%;
-  border-collapse:collapse;
-  margin-top:12px;
-  background:white;
+width:100%;border-collapse:collapse;margin-top:12px;background:white
 }
 th,td{
-  padding:10px;
-  border-bottom:1px solid #e2e8f0;
-  text-align:right;
-  font-size:13px;
+padding:10px;border-bottom:1px solid #e2e8f0;
+text-align:right;font-size:13px
 }
-th{
-  background:#e8eefc;
-  color:#172554;
-}
+th{background:#e8eefc;color:#172554}
 tr:hover td{background:#f8fafc}
 .badge{
-  display:inline-block;
-  padding:4px 8px;
-  border-radius:20px;
-  background:#dbeafe;
-  color:#1e40af;
-  font-size:12px;
+display:inline-block;padding:4px 8px;border-radius:20px;
+background:#dbeafe;color:#1e40af;font-size:12px
 }
 .total{
-  font-size:20px;
-  font-weight:bold;
-  color:#172554;
+font-size:20px;font-weight:bold;color:#172554
 }
 .hidden{display:none}
-.actions{
-  display:flex;
-  gap:6px;
-  flex-wrap:wrap;
-}
-.search{
-  margin-bottom:10px;
-}
+.actions{display:flex;gap:6px;flex-wrap:wrap}
+.search{margin-bottom:10px}
 .invoiceLine{
-  display:grid;
-  grid-template-columns:2fr 1fr 1fr 1fr auto;
-  gap:7px;
-  align-items:end;
-  margin-bottom:8px;
+display:grid;
+grid-template-columns:2fr 1fr 1fr 1fr auto;
+gap:7px;align-items:end;margin-bottom:8px
 }
 .notice{
-  background:#eff6ff;
-  border:1px solid #bfdbfe;
-  padding:12px;
-  border-radius:9px;
-  margin-bottom:12px;
+background:#eff6ff;border:1px solid #bfdbfe;padding:12px;
+border-radius:9px;margin-bottom:12px
 }
-.empty{
-  text-align:center;
-  padding:30px;
-  color:#64748b;
+.taxBox{
+background:#f8fafc;border:1px solid #cbd5e1;
+border-radius:10px;padding:14px;margin-top:12px
 }
+.taxRow{
+display:flex;justify-content:space-between;
+padding:6px 0
+}
+.grandTotal{
+font-size:24px;font-weight:bold;color:#15803d;
+border-top:2px solid #cbd5e1;margin-top:8px;padding-top:10px
+}
+.empty{text-align:center;padding:30px;color:#64748b}
+.dangerText{color:#b91c1c}
+.successText{color:#15803d}
 @media(max-width:900px){
-  aside{
-    transform:translateX(100%);
-    transition:.2s;
-  }
-  aside.open{transform:translateX(0)}
-  main{
-    margin-right:0;
-    width:100%;
-    padding:10px;
-  }
-  .grid{grid-template-columns:repeat(2,1fr)}
-  .formGrid{grid-template-columns:1fr}
-  .invoiceLine{
-    grid-template-columns:1fr 1fr;
-  }
+aside{
+transform:translateX(100%);transition:.2s
+}
+aside.open{transform:translateX(0)}
+main{margin-right:0;width:100%;padding:10px}
+.grid{grid-template-columns:repeat(2,1fr)}
+.formGrid{grid-template-columns:1fr}
+.invoiceLine{grid-template-columns:1fr 1fr}
 }
 @media(max-width:500px){
-  .grid{grid-template-columns:1fr 1fr}
-  .stat{padding:12px}
-  .stat b{font-size:18px}
+.grid{grid-template-columns:1fr 1fr}
+.stat{padding:12px}
+.stat b{font-size:18px}
+.invoiceLine{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -232,387 +152,2091 @@ tr:hover td{background:#f8fafc}
 <body>
 
 <header>
-  <div>
-    <div class="logo">محاسبي Pro</div>
-    <div class="subtitle">نظام محاسبي تجاري لإدارة الشركات والمبيعات والمشتريات والمخزون</div>
-  </div>
-  <button class="menuBtn" onclick="toggleMenu()">☰</button>
+<div>
+<div class="logo">محاسبي Pro</div>
+<div class="subtitle">نظام محاسبي تجاري لإدارة الشركات والمبيعات والمشتريات والمخزون</div>
+</div>
+<button class="menuBtn" onclick="toggleMenu()">☰</button>
 </header>
 
 <div class="layout">
 
 <aside id="sidebar">
-  <div class="navTitle">الرئيسية</div>
-  <nav>
-    <button class="active" onclick="showPage('dashboard',this)">🏠 لوحة التحكم</button>
-  </nav>
 
-  <div class="navTitle">البيانات</div>
-  <nav>
-    <button onclick="showPage('customers',this)">👥 العملاء</button>
-    <button onclick="showPage('suppliers',this)">🏢 الموردون</button>
-    <button onclick="showPage('items',this)">📦 الأصناف والمخزون</button>
-  </nav>
+<div class="navTitle">الرئيسية</div>
+<nav>
+<button class="active" onclick="showPage('dashboard',this)">🏠 لوحة التحكم</button>
+</nav>
 
-  <div class="navTitle">المعاملات</div>
-  <nav>
-    <button onclick="showPage('sales',this)">🧾 المبيعات</button>
-    <button onclick="showPage('purchases',this)">🛒 المشتريات</button>
-    <button onclick="showPage('expenses',this)">💸 المصروفات</button>
-    <button onclick="showPage('receipts',this)">💰 المقبوضات</button>
-    <button onclick="showPage('payments',this)">💳 المدفوعات</button>
-  </nav>
+<div class="navTitle">البيانات</div>
+<nav>
+<button onclick="showPage('customers',this)">👥 العملاء</button>
+<button onclick="showPage('suppliers',this)">🏢 الموردون</button>
+<button onclick="showPage('items',this)">📦 الأصناف والمخزون</button>
+</nav>
 
-  <div class="navTitle">الحسابات والتقارير</div>
-  <nav>
-    <button onclick="showPage('itemcard',this)">📋 كرت الصنف</button>
-    <button onclick="showPage('ledger',this)">📒 دفتر الأستاذ</button>
-    <button onclick="showPage('customerStatement',this)">📄 كشف حساب عميل</button>
-    <button onclick="showPage('supplierStatement',this)">📄 كشف حساب مورد</button>
-    <button onclick="showPage('trial',this)">⚖️ ميزان المراجعة</button>
-    <button onclick="showPage('reports',this)">📊 التقارير</button>
-  </nav>
+<div class="navTitle">المعاملات</div>
+<nav>
+<button onclick="showPage('sales',this)">🧾 المبيعات</button>
+<button onclick="showPage('purchases',this)">🛒 المشتريات</button>
+<button onclick="showPage('expenses',this)">💸 المصروفات</button>
+<button onclick="showPage('receipts',this)">💰 المقبوضات</button>
+<button onclick="showPage('payments',this)">💳 المدفوعات</button>
+</nav>
 
-  <div class="navTitle">النظام</div>
-  <nav>
-    <button onclick="showPage('settings',this)">⚙️ الإعدادات</button>
-  </nav>
+<div class="navTitle">الحسابات والتقارير</div>
+<nav>
+<button onclick="showPage('itemcard',this)">📋 كرت الصنف</button>
+<button onclick="showPage('ledger',this)">📒 دفتر الأستاذ</button>
+<button onclick="showPage('customerStatement',this)">📄 كشف حساب عميل</button>
+<button onclick="showPage('supplierStatement',this)">📄 كشف حساب مورد</button>
+<button onclick="showPage('trial',this)">⚖️ ميزان المراجعة</button>
+<button onclick="showPage('reports',this)">📊 التقارير</button>
+</nav>
+
+<div class="navTitle">النظام</div>
+<nav>
+<button onclick="showPage('settings',this)">⚙️ الإعدادات</button>
+</nav>
+
 </aside>
 
 <main>
 
 <!-- DASHBOARD -->
 <section id="dashboard" class="page">
-  <h2>لوحة التحكم</h2>
 
-  <div class="grid">
-    <div class="stat">العملاء <b id="statCustomers">0</b></div>
-    <div class="stat">الموردون <b id="statSuppliers">0</b></div>
-    <div class="stat">الأصناف <b id="statItems">0</b></div>
-    <div class="stat">المبيعات <b id="statSales">0.00</b></div>
-    <div class="stat">المشتريات <b id="statPurchases">0.00</b></div>
-    <div class="stat">المصروفات <b id="statExpenses">0.00</b></div>
-    <div class="stat">المقبوضات <b id="statReceipts">0.00</b></div>
-    <div class="stat">المدفوعات <b id="statPayments">0.00</b></div>
-  </div>
+<h2>لوحة التحكم</h2>
 
-  <div class="card">
-    <h2>ملخص الحسابات</h2>
-    <div id="dashboardSummary"></div>
-  </div>
+<div class="grid">
+<div class="stat">العملاء<b id="statCustomers">0</b></div>
+<div class="stat">الموردون<b id="statSuppliers">0</b></div>
+<div class="stat">الأصناف<b id="statItems">0</b></div>
+<div class="stat">المبيعات<b id="statSales">0.00</b></div>
+<div class="stat">المشتريات<b id="statPurchases">0.00</b></div>
+<div class="stat">المصروفات<b id="statExpenses">0.00</b></div>
+<div class="stat">المقبوضات<b id="statReceipts">0.00</b></div>
+<div class="stat">المدفوعات<b id="statPayments">0.00</b></div>
+</div>
+
+<div class="card">
+<h2>ملخص الحسابات</h2>
+<div id="dashboardSummary"></div>
+</div>
+
 </section>
 
 <!-- CUSTOMERS -->
 <section id="customers" class="page hidden">
-  <h2>👥 العملاء</h2>
 
-  <div class="card">
-    <div class="formGrid">
-      <div>
-        <label>اسم العميل</label>
-        <input id="customerName">
-      </div>
-      <div>
-        <label>رقم الهاتف</label>
-        <input id="customerPhone">
-      </div>
-      <div>
-        <label>العنوان</label>
-        <input id="customerAddress">
-      </div>
-    </div>
-    <br>
-    <button class="btn primary" onclick="addCustomer()">إضافة العميل</button>
-  </div>
+<h2>👥 العملاء</h2>
 
-  <div class="card">
-    <input class="search" placeholder="بحث عن عميل..." oninput="renderCustomers(this.value)">
-    <div id="customersTable"></div>
-  </div>
+<div class="card">
+<div class="formGrid">
+
+<div>
+<label>اسم العميل</label>
+<input id="customerName">
+</div>
+
+<div>
+<label>رقم الهاتف</label>
+<input id="customerPhone">
+</div>
+
+<div>
+<label>العنوان</label>
+<input id="customerAddress">
+</div>
+
+</div>
+
+<br>
+<button class="btn primary" onclick="addCustomer()">إضافة العميل</button>
+</div>
+
+<div class="card">
+<input class="search" placeholder="بحث عن عميل..." oninput="renderCustomers(this.value)">
+<div id="customersTable"></div>
+</div>
+
 </section>
 
 <!-- SUPPLIERS -->
 <section id="suppliers" class="page hidden">
-  <h2>🏢 الموردون</h2>
 
-  <div class="card">
-    <div class="formGrid">
-      <div>
-        <label>اسم المورد</label>
-        <input id="supplierName">
-      </div>
-      <div>
-        <label>رقم الهاتف</label>
-        <input id="supplierPhone">
-      </div>
-      <div>
-        <label>العنوان</label>
-        <input id="supplierAddress">
-      </div>
-    </div>
-    <br>
-    <button class="btn primary" onclick="addSupplier()">إضافة المورد</button>
-  </div>
+<h2>🏢 الموردون</h2>
 
-  <div class="card">
-    <input class="search" placeholder="بحث عن مورد..." oninput="renderSuppliers(this.value)">
-    <div id="suppliersTable"></div>
-  </div>
+<div class="card">
+<div class="formGrid">
+
+<div>
+<label>اسم المورد</label>
+<input id="supplierName">
+</div>
+
+<div>
+<label>رقم الهاتف</label>
+<input id="supplierPhone">
+</div>
+
+<div>
+<label>العنوان</label>
+<input id="supplierAddress">
+</div>
+
+</div>
+
+<br>
+<button class="btn primary" onclick="addSupplier()">إضافة المورد</button>
+</div>
+
+<div class="card">
+<input class="search" placeholder="بحث عن مورد..." oninput="renderSuppliers(this.value)">
+<div id="suppliersTable"></div>
+</div>
+
 </section>
 
 <!-- ITEMS -->
 <section id="items" class="page hidden">
-  <h2>📦 الأصناف والمخزون</h2>
 
-  <div class="card">
-    <div class="formGrid">
-      <div>
-        <label>اسم الصنف</label>
-        <input id="itemName">
-      </div>
-      <div>
-        <label>الكود</label>
-        <input id="itemCode">
-      </div>
-      <div>
-        <label>الوحدة</label>
-        <input id="itemUnit" value="قطعة">
-      </div>
-      <div>
-        <label>سعر البيع</label>
-        <input id="itemSalePrice" type="number" step="0.01">
-      </div>
-      <div>
-        <label>سعر الشراء</label>
-        <input id="itemPurchasePrice" type="number" step="0.01">
-      </div>
-      <div>
-        <label>الرصيد الافتتاحي</label>
-        <input id="itemOpening" type="number" step="0.01" value="0">
-      </div>
-    </div>
-    <br>
-    <button class="btn primary" onclick="addItem()">إضافة الصنف</button>
-  </div>
+<h2>📦 الأصناف والمخزون</h2>
 
-  <div class="card">
-    <input class="search" placeholder="بحث عن صنف..." oninput="renderItems(this.value)">
-    <div id="itemsTable"></div>
-  </div>
+<div class="card">
+
+<div class="formGrid">
+
+<div>
+<label>اسم الصنف</label>
+<input id="itemName">
+</div>
+
+<div>
+<label>الكود</label>
+<input id="itemCode">
+</div>
+
+<div>
+<label>الوحدة</label>
+<input id="itemUnit" value="قطعة">
+</div>
+
+<div>
+<label>سعر البيع</label>
+<input id="itemSalePrice" type="number" step="0.01">
+</div>
+
+<div>
+<label>سعر الشراء</label>
+<input id="itemPurchasePrice" type="number" step="0.01">
+</div>
+
+<div>
+<label>الرصيد الافتتاحي</label>
+<input id="itemOpening" type="number" step="0.01" value="0">
+</div>
+
+</div>
+
+<br>
+<button class="btn primary" onclick="addItem()">إضافة الصنف</button>
+
+</div>
+
+<div class="card">
+<input class="search" placeholder="بحث عن صنف..." oninput="renderItems(this.value)">
+<div id="itemsTable"></div>
+</div>
+
 </section>
 
 <!-- SALES -->
 <section id="sales" class="page hidden">
-  <h2>🧾 فاتورة مبيعات</h2>
 
-  <div class="card">
-    <div class="formGrid">
-      <div>
-        <label>العميل</label>
-        <select id="saleCustomer"></select>
-      </div>
-      <div>
-        <label>التاريخ</label>
-        <input id="saleDate" type="date">
-      </div>
-      <div>
-        <label>طريقة الدفع</label>
-        <select id="salePayment">
-          <option>آجل</option>
-          <option>نقدي</option>
-        </select>
-      </div>
-    </div>
+<h2>🧾 فاتورة مبيعات</h2>
 
-    <br>
-    <h3>بنود الفاتورة</h3>
-    <div id="saleLines"></div>
-    <button class="btn gray" onclick="addInvoiceLine('sale')">+ إضافة صنف</button>
+<div class="card">
 
-    <br><br>
-    <div class="total">الإجمالي: <span id="saleTotal">0.00</span></div>
-    <br>
-    <button class="btn success" onclick="saveSale()">حفظ فاتورة البيع</button>
-  </div>
+<div class="formGrid">
 
-  <div class="card">
-    <h3>الفواتير السابقة</h3>
-    <div id="salesTable"></div>
-  </div>
+<div>
+<label>العميل</label>
+<select id="saleCustomer"></select>
+</div>
+
+<div>
+<label>التاريخ</label>
+<input id="saleDate" type="date">
+</div>
+
+<div>
+<label>طريقة الدفع</label>
+<select id="salePayment">
+<option>آجل</option>
+<option>نقدي</option>
+</select>
+</div>
+
+</div>
+
+<br>
+
+<h3>بنود الفاتورة</h3>
+<div id="saleLines"></div>
+
+<button class="btn gray" onclick="addInvoiceLine('sale')">+ إضافة صنف</button>
+
+<div class="taxBox">
+
+<div class="taxRow">
+<span>الإجمالي قبل الضريبة</span>
+<strong><span id="saleSubtotal">0.00</span></strong>
+</div>
+
+<div class="taxRow">
+<span>ضريبة القيمة المضافة (15%)</span>
+<strong><span id="saleTax">0.00</span></strong>
+</div>
+
+<div class="grandTotal">
+الإجمالي شامل الضريبة:
+<span id="saleTotal">0.00</span>
+</div>
+
+</div>
+
+<br>
+
+<button class="btn success" onclick="saveSale()">حفظ فاتورة البيع</button>
+
+</div>
+
+<div class="card">
+<h3>الفواتير السابقة</h3>
+<div id="salesTable"></div>
+</div>
+
 </section>
 
 <!-- PURCHASES -->
 <section id="purchases" class="page hidden">
-  <h2>🛒 فاتورة مشتريات</h2>
 
-  <div class="card">
-    <div class="formGrid">
-      <div>
-        <label>المورد</label>
-        <select id="purchaseSupplier"></select>
-      </div>
-      <div>
-        <label>التاريخ</label>
-        <input id="purchaseDate" type="date">
-      </div>
-      <div>
-        <label>طريقة الدفع</label>
-        <select id="purchasePayment">
-          <option>آجل</option>
-          <option>نقدي</option>
-        </select>
-      </div>
-    </div>
+<h2>🛒 فاتورة مشتريات</h2>
 
-    <br>
-    <h3>بنود الفاتورة</h3>
-    <div id="purchaseLines"></div>
-    <button class="btn gray" onclick="addInvoiceLine('purchase')">+ إضافة صنف</button>
+<div class="card">
 
-    <br><br>
-    <div class="total">الإجمالي: <span id="purchaseTotal">0.00</span></div>
-    <br>
-    <button class="btn success" onclick="savePurchase()">حفظ فاتورة الشراء</button>
-  </div>
+<div class="formGrid">
 
-  <div class="card">
-    <h3>الفواتير السابقة</h3>
-    <div id="purchasesTable"></div>
-  </div>
+<div>
+<label>المورد</label>
+<select id="purchaseSupplier"></select>
+</div>
+
+<div>
+<label>التاريخ</label>
+<input id="purchaseDate" type="date">
+</div>
+
+<div>
+<label>طريقة الدفع</label>
+<select id="purchasePayment">
+<option>آجل</option>
+<option>نقدي</option>
+</select>
+</div>
+
+</div>
+
+<br>
+
+<h3>بنود الفاتورة</h3>
+<div id="purchaseLines"></div>
+
+<button class="btn gray" onclick="addInvoiceLine('purchase')">+ إضافة صنف</button>
+
+<div class="taxBox">
+
+<div class="taxRow">
+<span>الإجمالي قبل الضريبة</span>
+<strong><span id="purchaseSubtotal">0.00</span></strong>
+</div>
+
+<div class="taxRow">
+<span>ضريبة القيمة المضافة (15%)</span>
+<strong><span id="purchaseTax">0.00</span></strong>
+</div>
+
+<div class="grandTotal">
+الإجمالي شامل الضريبة:
+<span id="purchaseTotal">0.00</span>
+</div>
+
+</div>
+
+<br>
+
+<button class="btn success" onclick="savePurchase()">حفظ فاتورة الشراء</button>
+
+</div>
+
+<div class="card">
+<h3>الفواتير السابقة</h3>
+<div id="purchasesTable"></div>
+</div>
+
 </section>
 
 <!-- EXPENSES -->
 <section id="expenses" class="page hidden">
-  <h2>💸 المصروفات</h2>
 
-  <div class="card">
-    <div class="formGrid">
-      <div>
-        <label>نوع المصروف</label>
-        <input id="expenseName" placeholder="إيجار، كهرباء، نقل...">
-      </div>
-      <div>
-        <label>المبلغ</label>
-        <input id="expenseAmount" type="number" step="0.01">
-      </div>
-      <div>
-        <label>التاريخ</label>
-        <input id="expenseDate" type="date">
-      </div>
-    </div>
-    <br>
-    <button class="btn primary" onclick="addExpense()">حفظ المصروف</button>
-  </div>
+<h2>💸 المصروفات</h2>
 
-  <div class="card">
-    <div id="expensesTable"></div>
-  </div>
+<div class="card">
+
+<div class="formGrid">
+
+<div>
+<label>نوع المصروف</label>
+<input id="expenseName" placeholder="إيجار، كهرباء، نقل...">
+</div>
+
+<div>
+<label>المبلغ</label>
+<input id="expenseAmount" type="number" step="0.01">
+</div>
+
+<div>
+<label>التاريخ</label>
+<input id="expenseDate" type="date">
+</div>
+
+</div>
+
+<br>
+<button class="btn primary" onclick="addExpense()">حفظ المصروف</button>
+
+</div>
+
+<div class="card">
+<div id="expensesTable"></div>
+</div>
+
 </section>
 
 <!-- RECEIPTS -->
 <section id="receipts" class="page hidden">
-  <h2>💰 المقبوضات</h2>
 
-  <div class="card">
-    <div class="formGrid">
-      <div>
-        <label>من</label>
-        <input id="receiptFrom" placeholder="عميل / جهة">
-      </div>
-      <div>
-        <label>المبلغ</label>
-        <input id="receiptAmount" type="number" step="0.01">
-      </div>
-      <div>
-        <label>التاريخ</label>
-        <input id="receiptDate" type="date">
-      </div>
-      <div>
-        <label>البيان</label>
-        <input id="receiptNote">
-      </div>
-    </div>
-    <br>
-    <button class="btn success" onclick="addReceipt()">حفظ المقبوض</button>
-  </div>
+<h2>💰 المقبوضات</h2>
 
-  <div class="card">
-    <div id="receiptsTable"></div>
-  </div>
+<div class="card">
+
+<div class="formGrid">
+
+<div>
+<label>من</label>
+<input id="receiptFrom" placeholder="عميل / جهة">
+</div>
+
+<div>
+<label>المبلغ</label>
+<input id="receiptAmount" type="number" step="0.01">
+</div>
+
+<div>
+<label>التاريخ</label>
+<input id="receiptDate" type="date">
+</div>
+
+<div>
+<label>البيان</label>
+<input id="receiptNote">
+</div>
+
+</div>
+
+<br>
+<button class="btn success" onclick="addReceipt()">حفظ المقبوض</button>
+
+</div>
+
+<div class="card">
+<div id="receiptsTable"></div>
+</div>
+
 </section>
 
 <!-- PAYMENTS -->
 <section id="payments" class="page hidden">
-  <h2>💳 المدفوعات</h2>
 
-  <div class="card">
-    <div class="formGrid">
-      <div>
-        <label>إلى</label>
-        <input id="paymentTo" placeholder="مورد / جهة">
-      </div>
-      <div>
-        <label>المبلغ</label>
-        <input id="paymentAmount" type="number" step="0.01">
-      </div>
-      <div>
-        <label>التاريخ</label>
-        <input id="paymentDate" type="date">
-      </div>
-      <div>
-        <label>البيان</label>
-        <input id="paymentNote">
-      </div>
-    </div>
-    <br>
-    <button class="btn danger" onclick="addPayment()">حفظ المدفوع</button>
-  </div>
+<h2>💳 المدفوعات</h2>
 
-  <div class="card">
-    <div id="paymentsTable"></div>
-  </div>
+<div class="card">
+
+<div class="formGrid">
+
+<div>
+<label>إلى</label>
+<input id="paymentTo" placeholder="مورد / جهة">
+</div>
+
+<div>
+<label>المبلغ</label>
+<input id="paymentAmount" type="number" step="0.01">
+</div>
+
+<div>
+<label>التاريخ</label>
+<input id="paymentDate" type="date">
+</div>
+
+<div>
+<label>البيان</label>
+<input id="paymentNote">
+</div>
+
+</div>
+
+<br>
+<button class="btn danger" onclick="addPayment()">حفظ المدفوع</button>
+
+</div>
+
+<div class="card">
+<div id="paymentsTable"></div>
+</div>
+
 </section>
 
 <!-- ITEM CARD -->
 <section id="itemcard" class="page hidden">
-  <h2>📋 كرت الصنف</h2>
 
-  <div class="card">
-    <label>اختر الصنف</label>
-    <select id="itemCardSelect" onchange="renderItemCard()"></select>
-  </div>
+<h2>📋 كرت الصنف</h2>
 
-  <div class="card" id="itemCardResult"></div>
+<div class="card">
+
+<label>اختر الصنف</label>
+<select id="itemCardSelect" onchange="renderItemCard()"></select>
+
+</div>
+
+<div class="card" id="itemCardResult"></div>
+
 </section>
 
 <!-- LEDGER -->
 <section id="ledger" class="page hidden">
-  <h2>📒 دفتر الأستاذ</h2>
 
-  <div class="card">
-    <label>الحساب</label>
-    <select id="ledgerAccount" onchange="renderLedger()">
-      <option value="all">كل الحسابات</option>
-      <option value="sales">المبيعات</option>
-      <option value="purchases">المشتريات</option>
-      <option value="expenses">المصروفات</option>
-      <option value="receipts">المقبوضات</option>
-      <option value="payments">المدفوعات</option>
-    </select>
-  </div>
+<h2>📒 دفتر الأستاذ</h2>
 
-  <div class="card" id="ledgerResult"></div>
+<div class="card">
+
+<label>الحساب</label>
+
+<select id="ledgerAccount" onchange="renderLedger()">
+<option value="all">كل الحسابات</option>
+<option value="sales">المبيعات</option>
+<option value="purchases">المشتريات</option>
+<option value="expenses">المصروفات</option>
+<option value="receipts">المقبوضات</option>
+<option value="payments">المدفوعات</option>
+</select>
+
+</div>
+
+<div class="card" id="ledgerResult"></div>
+
 </section>
 
 <!-- CUSTOMER STATEMENT -->
 <section id="customerStatement" class="page hidden">
-  <h2>📄 كشف حساب عميل</h2>
 
-  <div class="card">
-    <select id="customerStatementSelect" onchange="renderCustomerStatement()"></select>
-  </div>
+<h2>📄 كشف حساب عميل</h2>
 
-  <div class="card" id="customerStatementResult"></div>
+<div class="card">
+<select id="customerStatementSelect" onchange="renderCustomerStatement()"></select>
+</div>
+
+<div class="card" id="customerStatementResult"></div>
+
 </section>
 
-<!--
+<!-- SUPPLIER STATEMENT -->
+<section id="supplierStatement" class="page hidden">
+
+<h2>📄 كشف حساب مورد</h2>
+
+<div class="card">
+<select id="supplierStatementSelect" onchange="renderSupplierStatement()"></select>
+</div>
+
+<div class="card" id="supplierStatementResult"></div>
+
+</section>
+
+<!-- TRIAL -->
+<section id="trial" class="page hidden">
+
+<h2>⚖️ ميزان المراجعة</h2>
+
+<div class="card" id="trialResult"></div>
+
+</section>
+
+<!-- REPORTS -->
+<section id="reports" class="page hidden">
+
+<h2>📊 التقارير</h2>
+
+<div class="card">
+
+<div class="grid">
+
+<div class="stat">
+إجمالي المبيعات
+<b id="reportSales">0.00</b>
+</div>
+
+<div class="stat">
+إجمالي ضريبة المبيعات
+<b id="reportSalesTax">0.00</b>
+</div>
+
+<div class="stat">
+إجمالي المشتريات
+<b id="reportPurchases">0.00</b>
+</div>
+
+<div class="stat">
+إجمالي ضريبة المشتريات
+<b id="reportPurchaseTax">0.00</b>
+</div>
+
+</div>
+
+</div>
+
+<div class="card" id="reportsResult"></div>
+
+</section>
+
+<!-- SETTINGS -->
+<section id="settings" class="page hidden">
+
+<h2>⚙️ الإعدادات</h2>
+
+<div class="card">
+
+<div class="notice">
+<strong>ضريبة القيمة المضافة:</strong>
+يتم تطبيق نسبة 15% تلقائيًا على فواتير المبيعات والمشتريات.
+</div>
+
+<div class="formGrid">
+
+<div>
+<label>اسم المنشأة</label>
+<input id="companyName" placeholder="اسم المنشأة">
+</div>
+
+<div>
+<label>الرقم الضريبي</label>
+<input id="taxNumber" placeholder="الرقم الضريبي">
+</div>
+
+<div>
+<label>نسبة الضريبة %</label>
+<input id="taxRate" type="number" value="15" min="0" max="100">
+</div>
+
+</div>
+
+<br>
+
+<button class="btn primary" onclick="saveSettings()">حفظ الإعدادات</button>
+
+<button class="btn danger" onclick="clearAllData()">
+حذف جميع البيانات
+</button>
+
+</div>
+
+</section>
+
+</main>
+</div>
+
+<script>
+
+const TAX_DEFAULT = 15;
+
+let db = JSON.parse(localStorage.getItem("mahasebiProDB")) || {
+customers:[],
+suppliers:[],
+items:[],
+sales:[],
+purchases:[],
+expenses:[],
+receipts:[],
+payments:[],
+settings:{
+companyName:"",
+taxNumber:"",
+taxRate:15
+}
+};
+
+function saveDB(){
+localStorage.setItem("mahasebiProDB",JSON.stringify(db));
+}
+
+function money(n){
+return Number(n||0).toFixed(2);
+}
+
+function today(){
+return new Date().toISOString().split("T")[0];
+}
+
+function taxRate(){
+let r=Number(db.settings.taxRate);
+return isNaN(r)?TAX_DEFAULT:r;
+}
+
+function showPage(id,btn){
+
+document.querySelectorAll(".page").forEach(p=>{
+p.classList.add("hidden");
+});
+
+document.getElementById(id).classList.remove("hidden");
+
+document.querySelectorAll("nav button").forEach(b=>{
+b.classList.remove("active");
+});
+
+if(btn) btn.classList.add("active");
+
+if(window.innerWidth<=900){
+document.getElementById("sidebar").classList.remove("open");
+}
+
+refreshPage(id);
+}
+
+function toggleMenu(){
+document.getElementById("sidebar").classList.toggle("open");
+}
+
+function refreshPage(id){
+
+renderDashboard();
+
+if(id==="customers") renderCustomers();
+if(id==="suppliers") renderSuppliers();
+if(id==="items") renderItems();
+if(id==="sales"){
+populateCustomers();
+renderSales();
+if(!document.querySelector("#saleLines .invoiceLine"))
+addInvoiceLine("sale");
+}
+if(id==="purchases"){
+populateSuppliers();
+renderPurchases();
+if(!document.querySelector("#purchaseLines .invoiceLine"))
+addInvoiceLine("purchase");
+}
+if(id==="expenses") renderExpenses();
+if(id==="receipts") renderReceipts();
+if(id==="payments") renderPayments();
+if(id==="itemcard"){
+populateItemCard();
+renderItemCard();
+}
+if(id==="ledger") renderLedger();
+if(id==="customerStatement"){
+populateCustomerStatement();
+renderCustomerStatement();
+}
+if(id==="supplierStatement"){
+populateSupplierStatement();
+renderSupplierStatement();
+}
+if(id==="trial") renderTrial();
+if(id==="reports") renderReports();
+if(id==="settings") loadSettings();
+
+}
+
+function addCustomer(){
+
+let name=document.getElementById("customerName").value.trim();
+
+if(!name){
+alert("اكتب اسم العميل");
+return;
+}
+
+db.customers.push({
+id:Date.now(),
+name,
+phone:document.getElementById("customerPhone").value,
+address:document.getElementById("customerAddress").value
+});
+
+saveDB();
+
+document.getElementById("customerName").value="";
+document.getElementById("customerPhone").value="";
+document.getElementById("customerAddress").value="";
+
+renderCustomers();
+populateCustomers();
+
+alert("تمت إضافة العميل");
+}
+
+function renderCustomers(search=""){
+
+let arr=db.customers.filter(c=>
+c.name.toLowerCase().includes(search.toLowerCase())
+);
+
+if(!arr.length){
+document.getElementById("customersTable").innerHTML=
+'<div class="empty">لا يوجد عملاء</div>';
+return;
+}
+
+let html=`<table>
+<tr>
+<th>الاسم</th>
+<th>الهاتف</th>
+<th>العنوان</th>
+<th>إجراء</th>
+</tr>`;
+
+arr.forEach(c=>{
+html+=`
+<tr>
+<td>${c.name}</td>
+<td>${c.phone||"-"}</td>
+<td>${c.address||"-"}</td>
+<td>
+<button class="btn danger" onclick="deleteCustomer(${c.id})">حذف</button>
+</td>
+</tr>`;
+});
+
+html+="</table>";
+
+document.getElementById("customersTable").innerHTML=html;
+}
+
+function deleteCustomer(id){
+
+if(!confirm("هل تريد حذف العميل؟")) return;
+
+db.customers=db.customers.filter(x=>x.id!==id);
+saveDB();
+renderCustomers();
+populateCustomers();
+}
+
+function addSupplier(){
+
+let name=document.getElementById("supplierName").value.trim();
+
+if(!name){
+alert("اكتب اسم المورد");
+return;
+}
+
+db.suppliers.push({
+id:Date.now(),
+name,
+phone:document.getElementById("supplierPhone").value,
+address:document.getElementById("supplierAddress").value
+});
+
+saveDB();
+
+document.getElementById("supplierName").value="";
+document.getElementById("supplierPhone").value="";
+document.getElementById("supplierAddress").value="";
+
+renderSuppliers();
+populateSuppliers();
+
+alert("تمت إضافة المورد");
+}
+
+function renderSuppliers(search=""){
+
+let arr=db.suppliers.filter(c=>
+c.name.toLowerCase().includes(search.toLowerCase())
+);
+
+if(!arr.length){
+document.getElementById("suppliersTable").innerHTML=
+'<div class="empty">لا يوجد موردون</div>';
+return;
+}
+
+let html=`<table>
+<tr>
+<th>الاسم</th>
+<th>الهاتف</th>
+<th>العنوان</th>
+<th>إجراء</th>
+</tr>`;
+
+arr.forEach(c=>{
+html+=`
+<tr>
+<td>${c.name}</td>
+<td>${c.phone||"-"}</td>
+<td>${c.address||"-"}</td>
+<td>
+<button class="btn danger" onclick="deleteSupplier(${c.id})">حذف</button>
+</td>
+</tr>`;
+});
+
+html+="</table>";
+
+document.getElementById("suppliersTable").innerHTML=html;
+}
+
+function deleteSupplier(id){
+
+if(!confirm("هل تريد حذف المورد؟")) return;
+
+db.suppliers=db.suppliers.filter(x=>x.id!==id);
+saveDB();
+renderSuppliers();
+populateSuppliers();
+}
+
+function addItem(){
+
+let name=document.getElementById("itemName").value.trim();
+
+if(!name){
+alert("اكتب اسم الصنف");
+return;
+}
+
+db.items.push({
+id:Date.now(),
+name,
+code:document.getElementById("itemCode").value,
+unit:document.getElementById("itemUnit").value||"قطعة",
+salePrice:Number(document.getElementById("itemSalePrice").value)||0,
+purchasePrice:Number(document.getElementById("itemPurchasePrice").value)||0,
+opening:Number(document.getElementById("itemOpening").value)||0
+});
+
+saveDB();
+
+document.getElementById("itemName").value="";
+document.getElementById("itemCode").value="";
+document.getElementById("itemSalePrice").value="";
+document.getElementById("itemPurchasePrice").value="";
+document.getElementById("itemOpening").value="0";
+
+renderItems();
+populateItemCard();
+
+alert("تمت إضافة الصنف");
+}
+
+function itemStock(item){
+
+let stock=Number(item.opening)||0;
+
+db.purchases.forEach(inv=>{
+inv.lines.forEach(l=>{
+if(Number(l.itemId)===Number(item.id))
+stock+=Number(l.qty)||0;
+});
+});
+
+db.sales.forEach(inv=>{
+inv.lines.forEach(l=>{
+if(Number(l.itemId)===Number(item.id))
+stock-=Number(l.qty)||0;
+});
+});
+
+return stock;
+}
+
+function renderItems(search=""){
+
+let arr=db.items.filter(i=>
+i.name.toLowerCase().includes(search.toLowerCase()) ||
+(i.code||"").toLowerCase().includes(search.toLowerCase())
+);
+
+if(!arr.length){
+document.getElementById("itemsTable").innerHTML=
+'<div class="empty">لا يوجد أصناف</div>';
+return;
+}
+
+let html=`<table>
+<tr>
+<th>الصنف</th>
+<th>الكود</th>
+<th>الوحدة</th>
+<th>بيع</th>
+<th>شراء</th>
+<th>المخزون</th>
+<th>إجراء</th>
+</tr>`;
+
+arr.forEach(i=>{
+html+=`
+<tr>
+<td>${i.name}</td>
+<td>${i.code||"-"}</td>
+<td>${i.unit}</td>
+<td>${money(i.salePrice)}</td>
+<td>${money(i.purchasePrice)}</td>
+<td><span class="badge">${money(itemStock(i))}</span></td>
+<td>
+<button class="btn danger" onclick="deleteItem(${i.id})">حذف</button>
+</td>
+</tr>`;
+});
+
+html+="</table>";
+
+document.getElementById("itemsTable").innerHTML=html;
+}
+
+function deleteItem(id){
+
+if(!confirm("هل تريد حذف الصنف؟")) return;
+
+db.items=db.items.filter(x=>x.id!==id);
+saveDB();
+renderItems();
+populateItemCard();
+}
+
+function populateCustomers(){
+
+let s=document.getElementById("saleCustomer");
+
+if(!s)return;
+
+s.innerHTML='<option value="">اختر العميل</option>';
+
+db.customers.forEach(c=>{
+s.innerHTML+=`<option value="${c.id}">${c.name}</option>`;
+});
+}
+
+function populateSuppliers(){
+
+let s=document.getElementById("purchaseSupplier");
+
+if(!s)return;
+
+s.innerHTML='<option value="">اختر المورد</option>';
+
+db.suppliers.forEach(c=>{
+s.innerHTML+=`<option value="${c.id}">${c.name}</option>`;
+});
+}
+
+function itemOptions(type){
+
+let html='<option value="">اختر الصنف</option>';
+
+db.items.forEach(i=>{
+let price=type==="sale"?i.salePrice:i.purchasePrice;
+
+html+=`
+<option value="${i.id}" data-price="${price}">
+${i.name} - ${i.code||""}
+</option>`;
+});
+
+return html;
+}
+
+function addInvoiceLine(type){
+
+let container=document.getElementById(
+type==="sale"?"saleLines":"purchaseLines"
+);
+
+let div=document.createElement("div");
+
+div.className="invoiceLine";
+
+div.innerHTML=`
+
+<div>
+<label>الصنف</label>
+<select onchange="lineItemChanged(this,'${type}')">
+${itemOptions(type)}
+</select>
+</div>
+
+<div>
+<label>الكمية</label>
+<input type="number" min="0" step="0.01" value="1"
+oninput="calculateInvoice('${type}')">
+</div>
+
+<div>
+<label>السعر قبل الضريبة</label>
+<input type="number" min="0" step="0.01"
+oninput="calculateInvoice('${type}')">
+</div>
+
+<div>
+<label>الإجمالي</label>
+<input type="number" readonly value="0.00">
+</div>
+
+<button class="btn danger" onclick="this.parentElement.remove();calculateInvoice('${type}')">×</button>
+`;
+
+container.appendChild(div);
+}
+
+function lineItemChanged(select,type){
+
+let opt=select.options[select.selectedIndex];
+
+let price=Number(opt.dataset.price)||0;
+
+let line=select.closest(".invoiceLine");
+
+line.querySelectorAll("input")[1].value=price;
+
+calculateInvoice(type);
+}
+
+function calculateInvoice(type){
+
+let container=document.getElementById(
+type==="sale"?"saleLines":"purchaseLines"
+);
+
+let subtotal=0;
+
+container.querySelectorAll(".invoiceLine").forEach(line=>{
+
+let inputs=line.querySelectorAll("input");
+
+let qty=Number(inputs[0].value)||0;
+let price=Number(inputs[1].value)||0;
+let total=qty*price;
+
+inputs[2].value=money(total);
+
+subtotal+=total;
+});
+
+let tax=subtotal*taxRate()/100;
+let total=subtotal+tax;
+
+document.getElementById(type+"Subtotal").textContent=money(subtotal);
+document.getElementById(type+"Tax").textContent=money(tax);
+document.getElementById(type+"Total").textContent=money(total);
+}
+
+function getInvoiceLines(type){
+
+let container=document.getElementById(
+type==="sale"?"saleLines":"purchaseLines"
+);
+
+let lines=[];
+
+container.querySelectorAll(".invoiceLine").forEach(line=>{
+
+let select=line.querySelector("select");
+let inputs=line.querySelectorAll("input");
+
+let itemId=Number(select.value);
+
+let qty=Number(inputs[0].value)||0;
+let price=Number(inputs[1].value)||0;
+
+if(itemId && qty>0){
+
+lines.push({
+itemId,
+qty,
+price,
+total:qty*price
+});
+}
+
+});
+
+return lines;
+}
+
+function saveSale(){
+
+let lines=getInvoiceLines("sale");
+
+if(!lines.length){
+alert("أضف صنفًا واحدًا على الأقل");
+return;
+}
+
+let subtotal=lines.reduce((a,b)=>a+b.total,0);
+let tax=subtotal*taxRate()/100;
+let total=subtotal+tax;
+
+db.sales.push({
+
+id:Date.now(),
+number:"S-"+Date.now(),
+customerId:Number(document.getElementById("saleCustomer").value)||0,
+date:document.getElementById("saleDate").value||today(),
+payment:document.getElementById("salePayment").value,
+lines,
+subtotal,
+tax,
+taxRate:taxRate(),
+total
+
+});
+
+saveDB();
+
+document.getElementById("saleLines").innerHTML="";
+addInvoiceLine("sale");
+
+renderSales();
+renderDashboard();
+
+alert("تم حفظ فاتورة البيع شامل ضريبة 15%");
+}
+
+function renderSales(){
+
+let el=document.getElementById("salesTable");
+
+if(!db.sales.length){
+el.innerHTML='<div class="empty">لا توجد فواتير مبيعات</div>';
+return;
+}
+
+let html=`<table>
+<tr>
+<th>رقم الفاتورة</th>
+<th>التاريخ</th>
+<th>العميل</th>
+<th>قبل الضريبة</th>
+<th>الضريبة</th>
+<th>الإجمالي</th>
+<th>الدفع</th>
+<th>إجراء</th>
+</tr>`;
+
+db.sales.slice().reverse().forEach(s=>{
+
+let c=db.customers.find(x=>x.id===s.customerId);
+
+html+=`
+<tr>
+<td>${s.number}</td>
+<td>${s.date}</td>
+<td>${c?c.name:"عميل نقدي"}</td>
+<td>${money(s.subtotal)}</td>
+<td>${money(s.tax)}</td>
+<td><strong>${money(s.total)}</strong></td>
+<td>${s.payment}</td>
+<td>
+<button class="btn danger" onclick="deleteSale(${s.id})">حذف</button>
+</td>
+</tr>`;
+});
+
+html+="</table>";
+
+el.innerHTML=html;
+}
+
+function deleteSale(id){
+
+if(!confirm("حذف فاتورة البيع؟"))return;
+
+db.sales=db.sales.filter(x=>x.id!==id);
+saveDB();
+renderSales();
+renderDashboard();
+renderItems();
+}
+
+function savePurchase(){
+
+let lines=getInvoiceLines("purchase");
+
+if(!lines.length){
+alert("أضف صنفًا واحدًا على الأقل");
+return;
+}
+
+let subtotal=lines.reduce((a,b)=>a+b.total,0);
+let tax=subtotal*taxRate()/100;
+let total=subtotal+tax;
+
+db.purchases.push({
+
+id:Date.now(),
+number:"P-"+Date.now(),
+supplierId:Number(document.getElementById("purchaseSupplier").value)||0,
+date:document.getElementById("purchaseDate").value||today(),
+payment:document.getElementById("purchasePayment").value,
+lines,
+subtotal,
+tax,
+taxRate:taxRate(),
+total
+
+});
+
+saveDB();
+
+document.getElementById("purchaseLines").innerHTML="";
+addInvoiceLine("purchase");
+
+renderPurchases();
+renderDashboard();
+renderItems();
+
+alert("تم حفظ فاتورة الشراء شامل ضريبة 15%");
+}
+
+function renderPurchases(){
+
+let el=document.getElementById("purchasesTable");
+
+if(!db.purchases.length){
+el.innerHTML='<div class="empty">لا توجد فواتير مشتريات</div>';
+return;
+}
+
+let html=`<table>
+<tr>
+<th>رقم الفاتورة</th>
+<th>التاريخ</th>
+<th>المورد</th>
+<th>قبل الضريبة</th>
+<th>الضريبة</th>
+<th>الإجمالي</th>
+<th>الدفع</th>
+<th>إجراء</th>
+</tr>`;
+
+db.purchases.slice().reverse().forEach(s=>{
+
+let c=db.suppliers.find(x=>x.id===s.supplierId);
+
+html+=`
+<tr>
+<td>${s.number}</td>
+<td>${s.date}</td>
+<td>${c?c.name:"مورد نقدي"}</td>
+<td>${money(s.subtotal)}</td>
+<td>${money(s.tax)}</td>
+<td><strong>${money(s.total)}</strong></td>
+<td>${s.payment}</td>
+<td>
+<button class="btn danger" onclick="deletePurchase(${s.id})">حذف</button>
+</td>
+</tr>`;
+});
+
+html+="</table>";
+
+el.innerHTML=html;
+}
+
+function deletePurchase(id){
+
+if(!confirm("حذف فاتورة الشراء؟"))return;
+
+db.purchases=db.purchases.filter(x=>x.id!==id);
+saveDB();
+renderPurchases();
+renderDashboard();
+renderItems();
+}
+
+function addExpense(){
+
+let name=document.getElementById("expenseName").value.trim();
+let amount=Number(document.getElementById("expenseAmount").value)||0;
+
+if(!name||amount<=0){
+alert("أدخل بيانات المصروف");
+return;
+}
+
+db.expenses.push({
+id:Date.now(),
+name,
+amount,
+date:document.getElementById("expenseDate").value||today()
+});
+
+saveDB();
+
+document.getElementById("expenseName").value="";
+document.getElementById("expenseAmount").value="";
+
+renderExpenses();
+renderDashboard();
+}
+
+function renderExpenses(){
+
+let el=document.getElementById("expensesTable");
+
+if(!db.expenses.length){
+el.innerHTML='<div class="empty">لا توجد مصروفات</div>';
+return;
+}
+
+let html=`<table>
+<tr>
+<th>النوع</th>
+<th>المبلغ</th>
+<th>التاريخ</th>
+<th>إجراء</th>
+</tr>`;
+
+db.expenses.slice().reverse().forEach(x=>{
+html+=`
+<tr>
+<td>${x.name}</td>
+<td>${money(x.amount)}</td>
+<td>${x.date}</td>
+<td>
+<button class="btn danger" onclick="deleteExpense(${x.id})">حذف</button>
+</td>
+</tr>`;
+});
+
+html+="</table>";
+
+el.innerHTML=html;
+}
+
+function deleteExpense(id){
+
+db.expenses=db.expenses.filter(x=>x.id!==id);
+saveDB();
+renderExpenses();
+renderDashboard();
+}
+
+function addReceipt(){
+
+let from=document.getElementById("receiptFrom").value.trim();
+let amount=Number(document.getElementById("receiptAmount").value)||0;
+
+if(!from||amount<=0){
+alert("أدخل بيانات المقبوض");
+return;
+}
+
+db.receipts.push({
+id:Date.now(),
+from,
+amount,
+date:document.getElementById("receiptDate").value||today(),
+note:document.getElementById("receiptNote").value
+});
+
+saveDB();
+
+document.getElementById("receiptFrom").value="";
+document.getElementById("receiptAmount").value="";
+document.getElementById("receiptNote").value="";
+
+renderReceipts();
+renderDashboard();
+}
+
+function renderReceipts(){
+
+let el=document.getElementById("receiptsTable");
+
+if(!db.receipts.length){
+el.innerHTML='<div class="empty">لا توجد مقبوضات</div>';
+return;
+}
+
+let html=`<table>
+<tr>
+<th>من</th>
+<th>المبلغ</th>
+<th>التاريخ</th>
+<th>البيان</th>
+<th>إجراء</th>
+</tr>`;
+
+db.receipts.slice().reverse().forEach(x=>{
+html+=`
+<tr>
+<td>${x.from}</td>
+<td>${money(x.amount)}</td>
+<td>${x.date}</td>
+<td>${x.note||"-"}</td>
+<td>
+<button class="btn danger" onclick="deleteReceipt(${x.id})">حذف</button>
+</td>
+</tr>`;
+});
+
+html+="</table>";
+
+el.innerHTML=html;
+}
+
+function deleteReceipt(id){
+
+db.receipts=db.receipts.filter(x=>x.id!==id);
+saveDB();
+renderReceipts();
+renderDashboard();
+}
+
+function addPayment(){
+
+let to=document.getElementById("paymentTo").value.trim();
+let amount=Number(document.getElementById("paymentAmount").value)||0;
+
+if(!to||amount<=0){
+alert("أدخل بيانات المدفوع");
+return;
+}
+
+db.payments.push({
+id:Date.now(),
+to,
+amount,
+date:document.getElementById("paymentDate").value||today(),
+note:document.getElementById("paymentNote").value
+});
+
+saveDB();
+
+document.getElementById("paymentTo").value="";
+document.getElementById("paymentAmount").value="";
+document.getElementById("paymentNote").value="";
+
+renderPayments();
+renderDashboard();
+}
+
+function renderPayments(){
+
+let el=document.getElementById("paymentsTable");
+
+if(!db.payments.length){
+el.innerHTML='<div class="empty">لا توجد مدفوعات</div>';
+return;
+}
+
+let html=`<table>
+<tr>
+<th>إلى</th>
+<th>المبلغ</th>
+<th>التاريخ</th>
+<th>البيان</th>
+<th>إجراء</th>
+</tr>`;
+
+db.payments.slice().reverse().forEach(x=>{
+html+=`
+<tr>
+<td>${x.to}</td>
+<td>${money(x.amount)}</td>
+<td>${x.date}</td>
+<td>${x.note||"-"}</td>
+<td>
+<button class="btn danger" onclick="deletePayment(${x.id})">حذف</button>
+</td>
+</tr>`;
+});
+
+html+="</table>";
+
+el.innerHTML=html;
+}
+
+function deletePayment(id){
+
+db.payments=db.payments.filter(x=>x.id!==id);
+saveDB();
+renderPayments();
+renderDashboard();
+}
+
+function populateItemCard(){
+
+let s=document.getElementById("itemCardSelect");
+
+if(!s)return;
+
+s.innerHTML='<option value="">اختر الصنف</option>';
+
+db.items.forEach(i=>{
+s.innerHTML+=`<option value="${i.id}">${i.name}</option>`;
+});
+}
+
+function renderItemCard(){
+
+let id=Number(document.getElementById("itemCardSelect").value);
+let el=document.getElementById("itemCardResult");
+
+if(!id){
+el.innerHTML='<div class="empty">اختر صنفًا</div>';
+return;
+}
+
+let item=db.items.find(x=>x.id===id);
+
+let rows=[];
+
+db.purchases.forEach(p=>{
+p.lines.forEach(l=>{
+if(l.itemId===id){
+rows.push({
+date:p.date,type:"شراء",qty:l.qty,
+price:l.price,total:l.total
+});
+}
+});
+});
+
+db.sales.forEach(s=>{
+s.lines.forEach(l=>{
+if(l.itemId===id){
+rows.push({
+date:s.date,type:"بيع",qty:-l.qty,
+price:l.price,total:l.total
+});
+}
+});
+});
+
+rows.sort((a,b)=>a.date.localeCompare(b.date));
+
+let html=`
+<h3>${item.name}</h3>
+<p>الرصيد الحالي: <strong>${money(itemStock(item))}</strong></p>
+<table>
+<tr>
+<th>التاريخ</th>
+<th>الحركة</th>
+<th>الكمية</th>
+<th>السعر</th>
+<th>الإجمالي</th>
+</tr>`;
+
+rows.forEach(r=>{
+html+=`
+<tr>
+<td>${r.date}</td>
+<td>${r.type}</td>
+<td>${money(r.qty)}</td>
+<td>${money(r.price)}</td>
+<td>${money(r.total)}</td>
+</tr>`;
+});
+
+html+="</table>";
+
+el.innerHTML=html;
+}
+
+function renderLedger(){
+
+let type=document.getElementById("ledgerAccount").value;
+let rows=[];
+
+if(type==="all"||type==="sales"){
+db.sales.forEach(x=>{
+rows.push({
+date:x.date,
+account:"المبيعات",
+debit:0,
+credit:x.subtotal,
+tax:x.tax
+});
+});
+}
+
+if(type==="all"||type==="purchases"){
+db.purchases.forEach(x=>{
+rows.push({
+date:x.date,
+account:"المشتريات",
+debit:x.subtotal,
+credit:0,
+tax:x.tax
+});
+});
+}
+
+if(type==="all"||type==="expenses"){
+db.expenses.forEach(x=>{
+rows.push({
+date:x.date,
+account:"المصروفات",
+debit:x.amount,
+credit:0,
+tax:0
+});
+});
+}
+
+if(type==="all"||type==="receipts"){
+db.receipts.forEach(x=>{
+rows.push({
+date:x.date,
+account:"المقبوضات",
+debit:x.amount,
+credit:0,
+tax:0
+});
+});
+}
+
+if(type==="all"||type==="payments"){
+db.payments.forEach(x=>{
+rows.push({
+date:x.date,
+account:"المدفوعات",
+debit:0,
+credit:x.amount,
+tax:0
+});
+});
+}
+
+let html=`<table>
+<tr>
+<th>التاريخ</th>
+<th>الحساب</th>
+<th>مدين</th>
+<th>دائن</th>
+<th>الضريبة</th>
+</tr>`;
+
+rows.forEach(r=>{
+html+=`
+<tr>
+<td>${r.date}</td>
+<td>${r.account}</td>
+<td>${money(r.debit)}</td>
+<td>${money(r.credit)}</td>
+<td>${money(r.tax)}</td>
+</tr>`;
+});
+
+html+="</table>";
+
+document.getElementById("ledgerResult").innerHTML=
+rows.length?html:'<div class="empty">لا توجد حركات</div>';
+}
+
+function populateCustomerStatement(){
+
+let s=document.getElementById("customerStatementSelect");
+
+s.innerHTML='<option value="">اختر العميل</option>';
+
+db.customers.forEach(c=>{
+s.innerHTML+=`<option value="${c.id}">${c.name}</option>`;
+});
+}
+
+function renderCustomerStatement(){
+
+let id=Number(document.getElementById("customerStatementSelect").value);
+let el=document.getElementById("customerStatementResult");
+
+if(!id){
+el.innerHTML='<div class="empty">اختر العميل</div>';
+return;
+}
+
+let rows=[];
+
+db.sales.forEach(s=>{
+if(s.customerId===id){
+rows.push({
+date:s.date,
+type:"فاتورة مبيعات",
+debit:s.total,
+credit:0
+});
+}
+});
+
+db.receipts.forEach(r=>{
+let c=db.customers.find(x=>x.name===r.from);
+
+if(c&&c.id===id){
+rows.push({
+date:r.date,
+type:"مقبوض",
+debit:0,
+credit:r.amount
+});
+}
+});
+
+rows.sort((a,b)=>a.date.localeCompare(b.date));
+
+let balance=0;
+
+let html=`<table>
+<tr>
+<th>التاريخ</th>
+<th>البيان</th>
+<th>مدين</th>
+<th>دائن</th>
+<th>الرصيد</th>
+</tr>`;
+
+rows.forEach(r=>{
+balance+=r.debit-r.credit;
+
+html+=`
+<tr>
+<td>${r.date}</td>
+<td>${r.type}</td>
+<td>${money(r.debit)}</td>
+<td>${money(r.credit)}</td>
+<td>${money(balance)}</td>
+</tr>`;
+});
+
+html+="</table>";
+
+html+=`<div class="total">الرصيد المستحق: ${money(balance)}</div>`;
+
+el.innerHTML=html;
+}
+
+function populateSupplierStatement(){
+
+let s=document.getElementById("supplierStatementSelect");
+
+s.innerHTML='<option value="">اختر المورد</option>';
+
+db.suppliers.forEach(c=>{
+s.innerHTML+=`<option value="${c.id}">${c.name}</option>`;
+});
+}
+
+function renderSupplierStatement(){
+
+let id=Number(document.getElementById("supplierStatementSelect").value);
+let el=document.getElementById("supplierStatementResult");
+
+if(!id){
+el.innerHTML='<div class="empty">اختر المورد</div>';
+return;
+}
+
+let rows=[];
+
+db.purchases.forEach(p=>{
+if(p.supplierId===id){
+rows.push({
+date:p.date,
+type:"فاتورة مشتريات",
+debit:0,
+credit:p.total
+});
+}
+});
+
+db.payments.forEach(p=>{
+let s=db.suppliers.find(x=>x.name===p.to);
+
+if(s&&s.id===id){
+rows.push({
+date:p.date,
+type:"مدفوع",
+debit:p.amount,
+credit:0
+});
+}
+});
+
+rows.sort((a,b)=>a.date.localeCompare(b.date));
+
+let balance=0;
+
+let html=`<table>
+<tr>
+<th>التاريخ</th>
+<th>البيان</th>
+<th>مدين</th>
+<th>دائن</th>
+<th>الرصيد</th>
+</tr>`;
+
+rows.forEach(r=>{
+balance+=r.credit-r.debit;
+
+html+=`
+<tr>
+<td>${r.date}</td>
+<td>${r.type}</td>
+<td>${money(r.debit)}</td>
+<td>${money(r.credit)}</td>
+<td>${money(balance)}</td>
+</tr>`;
+});
+
+html+="</table>";
+
+html+=`<div class="total">الرصيد المستحق للمورد: ${money(balance)}</div>`;
+
+el.innerHTML=html;
+}
+
+function renderTrial(){
+
+let sales=db.sales.reduce((a,b)=>a+b.subtotal,0);
+let purchases=db.purchases.reduce((a,b)=>a+b.subtotal,0);
+let expenses=db.expenses.reduce((a,b)=>a+b.amount,0);
+let receipts=db.receipts.reduce((a,b)=>a+b.amount,0);
+let payments=db.payments.reduce((a,b)=>a+b.amount,0);
+
+let html=`
+<table>
+<tr>
+<th>الحساب</th>
+<th>مدين</th>
+<th>دائن</th>
+</tr>
+
+<tr>
+<td>المبيعات</td>
+<td>0.00</td>
+<td>${money(sales)}</td>
+</tr>
+
+<tr>
+<td>المشتريات</td>
+<td>${money(purchases)}</td>
+<td>0.00</td>
+</tr>
+
+<tr>
+<td>المصروفات</td>
+<td>${money(expenses)}</td>
+<td>0.00</td>
+</tr>
+
+<tr>
+<td>المقبوضات</td>
+<td>${money(receipts)}</td>
+<td>0.00</td>
+</tr>
+
+<tr>
+<td>المدفوعات</td>
+<td>0.00</td>
+<td>${money(payments)}</td>
+</tr>
+
+</table>
+`;
+
+document.getElementById("trialResult").innerHTML=html;
+}
+
+function renderReports(){
+
+let sales=db.sales.reduce((a,b)=>a+b.subtotal,0);
+let salesTax=db.sales.reduce((a,b)=>a+b.tax,0);
+let purchases=db.purchases.reduce((a,b)=>a+b.subtotal,0);
+let purchaseTax=db.purchases.reduce((a,b)=>a+b.tax,0);
+
+document.getElementById("reportSales").textContent=money(sales);
+document.getElementById("reportSalesTax").textContent=money(salesTax);
+document.getElementById("reportPurchases").textContent=money(purchases);
+document.getElementById("reportPurchaseTax").textContent=money(purchaseTax);
+
+let netTax=salesTax-purchaseTax;
+
+document.getElementById("reportsResult").innerHTML=`
+
+<div class="notice">
+
+<h3>ملخص ضريبة القيمة المضافة</h3>
+
+<p>
+ضريبة المبيعات:
+<strong>${money(salesTax)}</strong>
+</p>
+
+<p>
+ضريبة المشتريات:
+<strong>${money(purchaseTax)}</strong>
+</p>
+
+<p>
+صافي الضريبة:
+<strong class="${netTax>=0?'dangerText':'successText'}">
+${money(netTax)}
+</strong>
+</p>
+
+</div>
+
+<p>
+إذا كان صافي الضريبة موجبًا فهذا يعني أن ضريبة المبيعات أكبر من ضريبة المشتريات.
+</p>
+`;
+}
+
+function renderDashboard(){
+
+document.getElementById("statCustomers").textContent=db.customers.length;
+document.getElementById("statSuppliers").textContent=db.suppliers.length;
+document.getElementById("statItems").textContent=db.items.length;
+
+let sales=db.sales.reduce((a,b)=>a+b.total,0);
+let purchases=db.purchases.reduce((a,b)=>a+b.total,0);
+let expenses=db.expenses.reduce((a,b)=>a+b.amount,0);
+let receipts=db.receipts.reduce((a,b)=>a+b.amount,0);
+let payments=db.payments.reduce((a,b)=>a+b.amount,0);
+
+document.getElementById("statSales").textContent=money(sales);
+document.getElementById("statPurchases").textContent=money(purchases);
+document.getElementById("statExpenses").textContent=money(expenses);
+document.getElementById("statReceipts").textContent=money(receipts);
+document.getElementById("statPayments").textContent=money(payments);
+
+let salesTax=db.sales.reduce((a,b)=>a+b.tax,0);
+let purchaseTax=db.purchases.reduce((a,b)=>a+b.tax,0);
+
+document.getElementById("dashboardSummary").innerHTML=`
+
+<div class="notice">
+
+<p>
+إجمالي المبيعات شامل الضريبة:
+<strong>${money(sales)}</strong>
+</p>
+
+<p>
+إجمالي المشتريات شامل الضريبة:
+<strong>${money(purchases)}</strong>
+</p>
+
+<p>
+ضريبة المبيعات 15%:
+<strong>${money(salesTax)}</strong>
+</p>
+
+<p>
+ضريبة المشتريات 15%:
+<strong>${money(purchaseTax)}</strong>
+</p>
+
+<p>
+صافي ضريبة القيمة المضافة:
+<strong>${money(salesTax-purchaseTax)}</strong>
+</p>
+
+</div>
+`;
+}
+
+function loadSettings(){
+
+document.getElementById("companyName").value=
+db.settings.companyName||"";
+
+document.getElementById("taxNumber").value=
+db.settings.taxNumber||"";
+
+document.getElementById("taxRate").value=
+db.settings.taxRate||15;
+}
+
+function saveSettings(){
+
+db.settings.companyName=
+document.getElementById("companyName").value;
+
+db.settings.taxNumber=
+document.getElementById("taxNumber").value;
+
+let rate=Number(document.getElementById("taxRate").value);
+
+if(rate<0)rate=15;
+
+db.settings.taxRate=rate;
+
+saveDB();
+
+alert("تم حفظ الإعدادات");
+}
+
+function clearAllData(){
+
+if(!confirm("⚠️ سيتم حذف جميع العملاء والموردين والأصناف والفواتير. هل أنت متأكد؟"))
+return;
+
+if(!confirm("تأكيد نهائي: حذف جميع البيانات؟"))
+return;
+
+localStorage.removeItem("mahasebiProDB");
+
+location.reload();
+}
+
+function setDates(){
+
+[
+"saleDate",
+"purchaseDate",
+"expenseDate",
+"receiptDate",
+"paymentDate"
+].forEach(id=>{
+let el=document.getElementById(id);
+if(el&&!el.value)el.value=today();
+});
+
+}
+
+document.addEventListener("DOMContentLoaded",function(){
+
+setDates();
+renderDashboard();
+
+});
+
+</script>
+
+</body>
+</html>
