@@ -2,8 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>محاسبي - النسخة الثانية</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>محاسبي - النسخة الثانية المحسنة</title>
 
 <style>
 *{box-sizing:border-box}
@@ -18,11 +18,14 @@ color:#172033
 header{
 background:#16213e;
 color:white;
-padding:16px 20px;
+padding:15px 18px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-gap:10px
+gap:10px;
+position:sticky;
+top:0;
+z-index:20
 }
 
 header h1{
@@ -37,14 +40,15 @@ opacity:.9
 
 .wrap{
 display:flex;
-min-height:calc(100vh - 65px)
+min-height:calc(100vh - 62px)
 }
 
 nav{
 width:220px;
 background:#fff;
 border-left:1px solid #e6e9ef;
-padding:12px
+padding:12px;
+flex-shrink:0
 }
 
 nav button{
@@ -56,18 +60,21 @@ text-align:right;
 border-radius:8px;
 cursor:pointer;
 font-size:15px;
-margin-bottom:4px
+margin-bottom:4px;
+color:#172033
 }
 
 nav button.active,
 nav button:hover{
-background:#eef2ff
+background:#eef2ff;
+color:#243b73
 }
 
 main{
 flex:1;
 padding:20px;
-max-width:1400px
+max-width:1500px;
+width:100%
 }
 
 .cards{
@@ -81,7 +88,8 @@ margin-bottom:20px
 background:white;
 border:1px solid #e7eaf0;
 border-radius:12px;
-padding:18px
+padding:18px;
+box-shadow:0 2px 7px rgba(0,0,0,.03)
 }
 
 .card small{
@@ -90,7 +98,7 @@ color:#697386
 
 .card b{
 display:block;
-font-size:24px;
+font-size:23px;
 margin-top:8px
 }
 
@@ -99,10 +107,15 @@ background:#fff;
 border:1px solid #e7eaf0;
 border-radius:12px;
 padding:18px;
-margin-bottom:18px
+margin-bottom:18px;
+overflow-x:auto
 }
 
 h2{
+margin-top:0
+}
+
+h3{
 margin-top:0
 }
 
@@ -118,7 +131,14 @@ padding:11px;
 border:1px solid #d7dce5;
 border-radius:7px;
 min-width:150px;
-background:white
+background:white;
+font-family:inherit;
+font-size:14px;
+outline:none
+}
+
+input:focus,select:focus{
+border-color:#243b73
 }
 
 .btn{
@@ -127,7 +147,13 @@ border-radius:7px;
 padding:11px 16px;
 cursor:pointer;
 background:#243b73;
-color:white
+color:white;
+font-family:inherit;
+font-size:14px
+}
+
+.btn:hover{
+opacity:.9
 }
 
 .btn.secondary{
@@ -145,16 +171,23 @@ background:#16803c;
 color:white
 }
 
+.btn.warning{
+background:#b7791f;
+color:white
+}
+
 table{
 width:100%;
 border-collapse:collapse;
-margin-top:14px
+margin-top:14px;
+min-width:650px
 }
 
 th,td{
 padding:10px;
 border-bottom:1px solid #eee;
-text-align:right
+text-align:right;
+white-space:nowrap
 }
 
 th{
@@ -183,36 +216,139 @@ background:#eef2ff;
 font-size:12px
 }
 
-@media(max-width:800px){
-
-nav{
-width:72px
+.badge.danger{
+background:#fee4e2;
+color:#b42318
 }
 
-nav button{
-font-size:0;
-text-align:center
+.badge.success{
+background:#dcfae6;
+color:#16803c
 }
 
-nav button:before{
-content:"•";
-font-size:24px
+.search{
+width:100%;
+margin-bottom:12px
 }
+
+.notice{
+padding:12px;
+border-radius:8px;
+background:#fff8e1;
+border:1px solid #f4df9b;
+margin-bottom:15px
+}
+
+.low-stock{
+background:#fff4f4
+}
+
+.actions{
+display:flex;
+gap:6px;
+flex-wrap:wrap
+}
+
+.stat-positive{
+color:#16803c
+}
+
+.stat-negative{
+color:#b42318
+}
+
+@media(max-width:1000px){
 
 .cards{
 grid-template-columns:repeat(2,1fr)
 }
 
+}
+
+@media(max-width:800px){
+
+header{
+padding:13px
+}
+
+header h1{
+font-size:19px
+}
+
+.wrap{
+display:block
+}
+
+nav{
+width:100%;
+display:flex;
+overflow-x:auto;
+gap:5px;
+padding:8px;
+position:sticky;
+top:61px;
+z-index:10;
+border-bottom:1px solid #e6e9ef;
+border-left:0
+}
+
+nav button{
+min-width:max-content;
+width:auto;
+font-size:13px;
+padding:10px 12px;
+margin:0
+}
+
 main{
-padding:12px
+padding:10px
+}
+
+.cards{
+grid-template-columns:repeat(2,1fr);
+gap:8px
+}
+
+.card{
+padding:13px
+}
+
+.card b{
+font-size:18px
+}
+
+.panel{
+padding:13px
+}
+
+.row{
+flex-direction:column
+}
+
+input,select,
+.row .btn{
+width:100%;
+min-width:0
 }
 
 table{
-font-size:13px
+font-size:12px
 }
 
-input,select{
-min-width:120px
+}
+
+@media(max-width:430px){
+
+.cards{
+grid-template-columns:1fr 1fr
+}
+
+.card small{
+font-size:11px
+}
+
+.card b{
+font-size:16px
 }
 
 }
@@ -222,8 +358,8 @@ min-width:120px
 <body>
 
 <header>
-<h1>محاسبي</h1>
-<span>النسخة الثانية</span>
+<h1>📒 محاسبي</h1>
+<span>النسخة الثانية المحسنة</span>
 </header>
 
 <div class="wrap">
@@ -236,9 +372,9 @@ min-width:120px
 
 <script>
 
-/* =========================
+/* =========================================================
    البيانات
-========================= */
+========================================================= */
 
 const state={
 
@@ -259,30 +395,48 @@ expenses:JSON.parse(localStorage.getItem("expenses")||"[]")
 };
 
 
-/* =========================
+/* =========================================================
    الحفظ
-========================= */
+========================================================= */
 
 function save(){
 
-localStorage.setItem("customers",JSON.stringify(state.customers));
+localStorage.setItem(
+"customers",
+JSON.stringify(state.customers)
+);
 
-localStorage.setItem("suppliers",JSON.stringify(state.suppliers));
+localStorage.setItem(
+"suppliers",
+JSON.stringify(state.suppliers)
+);
 
-localStorage.setItem("items",JSON.stringify(state.items));
+localStorage.setItem(
+"items",
+JSON.stringify(state.items)
+);
 
-localStorage.setItem("sales",JSON.stringify(state.sales));
+localStorage.setItem(
+"sales",
+JSON.stringify(state.sales)
+);
 
-localStorage.setItem("purchases",JSON.stringify(state.purchases));
+localStorage.setItem(
+"purchases",
+JSON.stringify(state.purchases)
+);
 
-localStorage.setItem("expenses",JSON.stringify(state.expenses"));
+localStorage.setItem(
+"expenses",
+JSON.stringify(state.expenses)
+);
 
 }
 
 
-/* =========================
+/* =========================================================
    القوائم
-========================= */
+========================================================= */
 
 const menus=[
 
@@ -314,9 +468,7 @@ document.getElementById("nav").innerHTML=
 menus.map(x=>`
 
 <button
-
 class="${state.section===x[0]?"active":""}"
-
 onclick="go('${x[0]}')">
 
 ${x[1]}
@@ -337,15 +489,16 @@ render();
 }
 
 
-/* =========================
-   أدوات
-========================= */
+/* =========================================================
+   أدوات عامة
+========================================================= */
 
 function money(value){
 
 return Number(value||0).toFixed(2);
 
 }
+
 
 function today(){
 
@@ -354,19 +507,42 @@ return new Date().toLocaleDateString("ar-EG");
 }
 
 
-/* =========================
+function number(value){
+
+return Number(value)||0;
+
+}
+
+
+/* =========================================================
    لوحة التحكم
-========================= */
+========================================================= */
 
 function dashboard(){
 
-let sales=state.sales.reduce((a,x)=>a+Number(x.total||0),0);
+let sales=state.sales.reduce(
+(a,x)=>a+number(x.total),0
+);
 
-let purchases=state.purchases.reduce((a,x)=>a+Number(x.total||0),0);
+let purchases=state.purchases.reduce(
+(a,x)=>a+number(x.total),0
+);
 
-let expenses=state.expenses.reduce((a,x)=>a+Number(x.amount||0),0);
+let expenses=state.expenses.reduce(
+(a,x)=>a+number(x.amount),0
+);
 
-let profit=sales-purchases-expenses;
+let costOfSales=state.sales.reduce(
+(a,x)=>a+number(x.costTotal),0
+);
+
+let grossProfit=sales-costOfSales;
+
+let netProfit=grossProfit-expenses;
+
+let lowStock=state.items.filter(
+x=>number(x.qty)<=number(x.minQty||0)
+);
 
 return `
 
@@ -400,8 +576,8 @@ return `
 </div>
 
 <div class="card">
-<small>إجمالي المشتريات</small>
-<b>${money(purchases)}</b>
+<small>تكلفة المبيعات</small>
+<b>${money(costOfSales)}</b>
 </div>
 
 <div class="card">
@@ -411,24 +587,54 @@ return `
 
 <div class="card">
 <small>صافي الربح</small>
-<b>${money(profit)}</b>
+<b class="${netProfit>=0?"stat-positive":"stat-negative"}">
+${money(netProfit)}
+</b>
 </div>
 
 </div>
+
+${lowStock.length?`
+
+<div class="notice">
+
+<b>⚠️ تنبيه المخزون</b>
+
+<br>
+
+يوجد ${lowStock.length} صنف يحتاج إلى مراجعة الكمية.
+
+</div>
+
+`:""}
 
 <div class="panel">
 
-<h2>نظرة سريعة</h2>
-
-<p>تاريخ اليوم: <b>${today()}</b></p>
+<h3>نظرة سريعة</h3>
 
 <p>
-النظام يحفظ البيانات تلقائيًا داخل المتصفح.
+تاريخ اليوم:
+<b>${today()}</b>
 </p>
 
 <p>
-استخدم قائمة الأصناف لإضافة المنتجات والكميات،
-ثم استخدم المبيعات والمشتريات لتسجيل العمليات.
+عدد فواتير المبيعات:
+<b>${state.sales.length}</b>
+</p>
+
+<p>
+عدد فواتير المشتريات:
+<b>${state.purchases.length}</b>
+</p>
+
+<p>
+عدد المصروفات:
+<b>${state.expenses.length}</b>
+</p>
+
+<p>
+إجمالي قيمة المخزون:
+<b>${money(stockValue())}</b>
 </p>
 
 </div>
@@ -438,9 +644,9 @@ return `
 }
 
 
-/* =========================
+/* =========================================================
    العملاء
-========================= */
+========================================================= */
 
 function customers(){
 
@@ -452,14 +658,24 @@ return `
 
 <div class="row">
 
-<input id="customerName" placeholder="اسم العميل">
+<input
+id="customerName"
+placeholder="اسم العميل">
 
-<input id="customerPhone" placeholder="رقم الهاتف">
+<input
+id="customerPhone"
+placeholder="رقم الهاتف">
 
-<input id="customerAddress" placeholder="العنوان">
+<input
+id="customerAddress"
+placeholder="العنوان">
 
-<button class="btn" onclick="addCustomer()">
+<button
+class="btn"
+onclick="addCustomer()">
+
 إضافة عميل
+
 </button>
 
 </div>
@@ -467,6 +683,29 @@ return `
 </div>
 
 <div class="panel">
+
+<input
+class="search"
+id="customerSearch"
+placeholder="🔎 البحث عن عميل..."
+oninput="filterCustomers()">
+
+<div id="customerTable">
+
+${customerTable()}
+
+</div>
+
+</div>
+
+`;
+
+}
+
+
+function customerTable(){
+
+return `
 
 <table>
 
@@ -492,11 +731,11 @@ ${state.customers.map((x,i)=>`
 
 <td>${i+1}</td>
 
-<td>${x.name}</td>
+<td>${x.name||""}</td>
 
-<td>${x.phone}</td>
+<td>${x.phone||""}</td>
 
-<td>${x.address}</td>
+<td>${x.address||""}</td>
 
 <td>
 
@@ -526,7 +765,77 @@ onclick="deleteCustomer(${i})">
 
 </table>
 
-</div>
+`;
+
+}
+
+
+function filterCustomers(){
+
+let q=document.getElementById("customerSearch").value
+.toLowerCase();
+
+let rows=state.customers.filter(x=>
+String(x.name||"").toLowerCase().includes(q)||
+String(x.phone||"").toLowerCase().includes(q)
+);
+
+document.getElementById("customerTable").innerHTML=`
+
+<table>
+
+<thead>
+
+<tr>
+<th>#</th>
+<th>الاسم</th>
+<th>الهاتف</th>
+<th>العنوان</th>
+<th>حذف</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+${rows.map(x=>{
+
+let i=state.customers.indexOf(x);
+
+return `
+
+<tr>
+
+<td>${i+1}</td>
+<td>${x.name||""}</td>
+<td>${x.phone||""}</td>
+<td>${x.address||""}</td>
+
+<td>
+<button
+class="btn danger"
+onclick="deleteCustomer(${i})">
+حذف
+</button>
+</td>
+
+</tr>
+
+`;
+
+}).join("")||
+
+`<tr>
+<td colspan="5" class="empty">
+لا توجد نتائج
+</td>
+</tr>`
+
+}
+
+</tbody>
+
+</table>
 
 `;
 
@@ -579,9 +888,9 @@ render();
 }
 
 
-/* =========================
+/* =========================================================
    الموردون
-========================= */
+========================================================= */
 
 function suppliers(){
 
@@ -593,13 +902,21 @@ return `
 
 <div class="row">
 
-<input id="supplierName" placeholder="اسم المورد">
+<input
+id="supplierName"
+placeholder="اسم المورد">
 
-<input id="supplierPhone" placeholder="رقم الهاتف">
+<input
+id="supplierPhone"
+placeholder="رقم الهاتف">
 
-<input id="supplierAddress" placeholder="العنوان">
+<input
+id="supplierAddress"
+placeholder="العنوان">
 
-<button class="btn" onclick="addSupplier()">
+<button
+class="btn"
+onclick="addSupplier()">
 
 إضافة مورد
 
@@ -610,6 +927,29 @@ return `
 </div>
 
 <div class="panel">
+
+<input
+class="search"
+id="supplierSearch"
+placeholder="🔎 البحث عن مورد..."
+oninput="filterSuppliers()">
+
+<div id="supplierTable">
+
+${supplierTable()}
+
+</div>
+
+</div>
+
+`;
+
+}
+
+
+function supplierTable(){
+
+return `
 
 <table>
 
@@ -635,11 +975,11 @@ ${state.suppliers.map((x,i)=>`
 
 <td>${i+1}</td>
 
-<td>${x.name}</td>
+<td>${x.name||""}</td>
 
-<td>${x.phone}</td>
+<td>${x.phone||""}</td>
 
-<td>${x.address}</td>
+<td>${x.address||""}</td>
 
 <td>
 
@@ -669,7 +1009,79 @@ onclick="deleteSupplier(${i})">
 
 </table>
 
-</div>
+`;
+
+}
+
+
+function filterSuppliers(){
+
+let q=document.getElementById("supplierSearch").value
+.toLowerCase();
+
+let rows=state.suppliers.filter(x=>
+String(x.name||"").toLowerCase().includes(q)||
+String(x.phone||"").toLowerCase().includes(q)
+);
+
+document.getElementById("supplierTable").innerHTML=`
+
+<table>
+
+<thead>
+
+<tr>
+<th>#</th>
+<th>الاسم</th>
+<th>الهاتف</th>
+<th>العنوان</th>
+<th>حذف</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+${rows.map(x=>{
+
+let i=state.suppliers.indexOf(x);
+
+return `
+
+<tr>
+
+<td>${i+1}</td>
+<td>${x.name||""}</td>
+<td>${x.phone||""}</td>
+<td>${x.address||""}</td>
+
+<td>
+
+<button
+class="btn danger"
+onclick="deleteSupplier(${i})">
+حذف
+</button>
+
+</td>
+
+</tr>
+
+`;
+
+}).join("")||
+
+`<tr>
+<td colspan="5" class="empty">
+لا توجد نتائج
+</td>
+</tr>`
+
+}
+
+</tbody>
+
+</table>
 
 `;
 
@@ -722,9 +1134,9 @@ render();
 }
 
 
-/* =========================
+/* =========================================================
    الأصناف والمخزون
-========================= */
+========================================================= */
 
 function items(){
 
@@ -736,17 +1148,41 @@ return `
 
 <div class="row">
 
-<input id="itemName" placeholder="اسم الصنف">
+<input
+id="itemName"
+placeholder="اسم الصنف">
 
-<input id="itemCode" placeholder="كود الصنف">
+<input
+id="itemCode"
+placeholder="كود الصنف">
 
-<input id="itemPrice" type="number" placeholder="سعر البيع">
+<input
+id="itemPrice"
+type="number"
+min="0"
+placeholder="سعر البيع">
 
-<input id="itemPurchase" type="number" placeholder="سعر الشراء">
+<input
+id="itemPurchase"
+type="number"
+min="0"
+placeholder="سعر الشراء">
 
-<input id="itemQty" type="number" placeholder="الكمية">
+<input
+id="itemQty"
+type="number"
+min="0"
+placeholder="الكمية الحالية">
 
-<button class="btn" onclick="addItem()">
+<input
+id="itemMinQty"
+type="number"
+min="0"
+placeholder="حد التنبيه">
+
+<button
+class="btn"
+onclick="addItem()">
 
 إضافة صنف
 
@@ -757,6 +1193,29 @@ return `
 </div>
 
 <div class="panel">
+
+<input
+class="search"
+id="itemSearch"
+placeholder="🔎 البحث عن صنف أو كود..."
+oninput="filterItems()">
+
+<div id="itemTable">
+
+${itemTable()}
+
+</div>
+
+</div>
+
+`;
+
+}
+
+
+function itemTable(){
+
+return `
 
 <table>
 
@@ -771,6 +1230,7 @@ return `
 <th>سعر الشراء</th>
 <th>الكمية</th>
 <th>القيمة</th>
+<th>الحالة</th>
 <th>حذف</th>
 
 </tr>
@@ -781,21 +1241,33 @@ return `
 
 ${state.items.map((x,i)=>`
 
-<tr>
+<tr class="${number(x.qty)<=number(x.minQty||0)?"low-stock":""}">
 
 <td>${i+1}</td>
 
-<td>${x.code}</td>
+<td>${x.code||""}</td>
 
-<td>${x.name}</td>
+<td>${x.name||""}</td>
 
 <td>${money(x.price)}</td>
 
 <td>${money(x.purchase)}</td>
 
-<td>${x.qty}</td>
+<td>${number(x.qty)}</td>
 
-<td>${money(x.qty*x.purchase)}</td>
+<td>${money(number(x.qty)*number(x.purchase))}</td>
+
+<td>
+
+${
+number(x.qty)<=number(x.minQty||0)
+?
+`<span class="badge danger">مخزون منخفض</span>`
+:
+`<span class="badge success">جيد</span>`
+}
+
+</td>
 
 <td>
 
@@ -814,7 +1286,7 @@ onclick="deleteItem(${i})">
 `).join("")||
 
 `<tr>
-<td colspan="8" class="empty">
+<td colspan="9" class="empty">
 لا توجد أصناف
 </td>
 </tr>`
@@ -825,7 +1297,106 @@ onclick="deleteItem(${i})">
 
 </table>
 
-</div>
+`;
+
+}
+
+
+function filterItems(){
+
+let q=document.getElementById("itemSearch").value
+.toLowerCase();
+
+let rows=state.items.filter(x=>
+String(x.name||"").toLowerCase().includes(q)||
+String(x.code||"").toLowerCase().includes(q)
+);
+
+document.getElementById("itemTable").innerHTML=`
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>#</th>
+<th>الكود</th>
+<th>الصنف</th>
+<th>سعر البيع</th>
+<th>سعر الشراء</th>
+<th>الكمية</th>
+<th>القيمة</th>
+<th>الحالة</th>
+<th>حذف</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+${rows.map(x=>{
+
+let i=state.items.indexOf(x);
+
+return `
+
+<tr>
+
+<td>${i+1}</td>
+
+<td>${x.code||""}</td>
+
+<td>${x.name||""}</td>
+
+<td>${money(x.price)}</td>
+
+<td>${money(x.purchase)}</td>
+
+<td>${number(x.qty)}</td>
+
+<td>${money(number(x.qty)*number(x.purchase))}</td>
+
+<td>
+
+${
+number(x.qty)<=number(x.minQty||0)
+?
+`<span class="badge danger">مخزون منخفض</span>`
+:
+`<span class="badge success">جيد</span>`
+}
+
+</td>
+
+<td>
+
+<button
+class="btn danger"
+onclick="deleteItem(${i})">
+حذف
+</button>
+
+</td>
+
+</tr>
+
+`;
+
+}).join("")||
+
+`<tr>
+<td colspan="9" class="empty">
+لا توجد نتائج
+</td>
+</tr>`
+
+}
+
+</tbody>
+
+</table>
 
 `;
 
@@ -838,15 +1409,33 @@ let name=document.getElementById("itemName").value.trim();
 
 let code=document.getElementById("itemCode").value.trim();
 
-let price=Number(document.getElementById("itemPrice").value);
+let price=number(
+document.getElementById("itemPrice").value
+);
 
-let purchase=Number(document.getElementById("itemPurchase").value);
+let purchase=number(
+document.getElementById("itemPurchase").value
+);
 
-let qty=Number(document.getElementById("itemQty").value);
+let qty=number(
+document.getElementById("itemQty").value
+);
+
+let minQty=number(
+document.getElementById("itemMinQty").value
+);
 
 if(!name){
 
 alert("اكتب اسم الصنف");
+
+return;
+
+}
+
+if(price<0||purchase<0||qty<0){
+
+alert("تأكد من الأسعار والكميات");
 
 return;
 
@@ -858,7 +1447,8 @@ name,
 code,
 price,
 purchase,
-qty
+qty,
+minQty
 
 });
 
@@ -891,863 +1481,5 @@ return state.items.reduce(
 (total,item)=>
 
 total+
-
-(Number(item.qty)||0)*(Number(item.purchase)||0),
-
-0
-
-);
-
-}
-
-
-/* =========================
-   فاتورة المبيعات
-========================= */
-
-function sales(){
-
-return `
-
-<h2>فواتير المبيعات</h2>
-
-<div class="panel">
-
-<div class="row">
-
-<input id="saleCustomer" placeholder="اسم العميل">
-
-<select id="saleItem">
-
-<option value="">اختر الصنف</option>
-
-${state.items.map((x,i)=>`
-
-<option value="${i}">
-
-${x.name} - ${money(x.price)}
-
-</option>
-
-`).join("")}
-
-</select>
-
-<input
-id="saleQty"
-type="number"
-min="1"
-value="1"
-placeholder="الكمية">
-
-<input
-id="saleDiscount"
-type="number"
-value="0"
-placeholder="الخصم">
-
-<button
-class="btn success"
-onclick="addSale()">
-
-حفظ الفاتورة
-
-</button>
-
-</div>
-
-<div class="total-box">
-
-الإجمالي المتوقع:
-
-<b id="salePreview">0.00</b>
-
-</div>
-
-</div>
-
-<div class="panel">
-
-<table>
-
-<thead>
-
-<tr>
-
-<th>#</th>
-<th>العميل</th>
-<th>الصنف</th>
-<th>الكمية</th>
-<th>الإجمالي</th>
-<th>التاريخ</th>
-<th>حذف</th>
-
-</tr>
-
-</thead>
-
-<tbody>
-
-${state.sales.map((x,i)=>`
-
-<tr>
-
-<td>${i+1}</td>
-
-<td>${x.customer}</td>
-
-<td>${x.item}</td>
-
-<td>${x.qty}</td>
-
-<td>${money(x.total)}</td>
-
-<td>${x.date}</td>
-
-<td>
-
-<button
-class="btn danger"
-onclick="deleteSale(${i})">
-
-حذف
-
-</button>
-
-</td>
-
-</tr>
-
-`).join("")||
-
-`<tr>
-<td colspan="7" class="empty">
-لا توجد فواتير مبيعات
-</td>
-</tr>`
-
-}
-
-</tbody>
-
-</table>
-
-</div>
-
-`;
-
-}
-
-
-function addSale(){
-
-let customer=document.getElementById("saleCustomer").value.trim();
-
-let itemIndex=document.getElementById("saleItem").value;
-
-let qty=Number(document.getElementById("saleQty").value);
-
-let discount=Number(document.getElementById("saleDiscount").value||0);
-
-if(!customer){
-
-alert("اكتب اسم العميل");
-
-return;
-
-}
-
-if(itemIndex===""){
-
-alert("اختر الصنف");
-
-return;
-
-}
-
-if(qty<=0){
-
-alert("أدخل كمية صحيحة");
-
-return;
-
-}
-
-let item=state.items[itemIndex];
-
-if(qty>Number(item.qty)){
-
-alert("الكمية المطلوبة أكبر من المخزون");
-
-return;
-
-}
-
-let total=(Number(item.price)*qty)-discount;
-
-if(total<0)total=0;
-
-state.sales.push({
-
-customer,
-
-item:item.name,
-
-qty,
-
-price:item.price,
-
-discount,
-
-total,
-
-date:today()
-
-});
-
-item.qty-=qty;
-
-save();
-
-render();
-
-}
-
-
-function deleteSale(i){
-
-if(confirm("سيتم حذف الفاتورة وإرجاع الكمية للمخزون. هل تريد المتابعة؟")){
-
-let sale=state.sales[i];
-
-let item=state.items.find(x=>x.name===sale.item);
-
-if(item){
-
-item.qty+=Number(sale.qty||0);
-
-}
-
-state.sales.splice(i,1);
-
-save();
-
-render();
-
-}
-
-}
-
-
-/* =========================
-   المشتريات
-========================= */
-
-function purchases(){
-
-return `
-
-<h2>فواتير المشتريات</h2>
-
-<div class="panel">
-
-<div class="row">
-
-<input id="purchaseSupplier" placeholder="اسم المورد">
-
-<select id="purchaseItem">
-
-<option value="">اختر الصنف</option>
-
-${state.items.map((x,i)=>`
-
-<option value="${i}">
-
-${x.name}
-
-</option>
-
-`).join("")}
-
-</select>
-
-<input
-id="purchaseQty"
-type="number"
-min="1"
-value="1"
-placeholder="الكمية">
-
-<input
-id="purchasePrice"
-type="number"
-placeholder="سعر الشراء">
-
-<button
-class="btn success"
-onclick="addPurchase()">
-
-حفظ فاتورة الشراء
-
-</button>
-
-</div>
-
-</div>
-
-<div class="panel">
-
-<table>
-
-<thead>
-
-<tr>
-
-<th>#</th>
-<th>المورد</th>
-<th>الصنف</th>
-<th>الكمية</th>
-<th>الإجمالي</th>
-<th>التاريخ</th>
-<th>حذف</th>
-
-</tr>
-
-</thead>
-
-<tbody>
-
-${state.purchases.map((x,i)=>`
-
-<tr>
-
-<td>${i+1}</td>
-
-<td>${x.supplier}</td>
-
-<td>${x.item}</td>
-
-<td>${x.qty}</td>
-
-<td>${money(x.total)}</td>
-
-<td>${x.date}</td>
-
-<td>
-
-<button
-class="btn danger"
-onclick="deletePurchase(${i})">
-
-حذف
-
-</button>
-
-</td>
-
-</tr>
-
-`).join("")||
-
-`<tr>
-<td colspan="7" class="empty">
-لا توجد فواتير مشتريات
-</td>
-</tr>`
-
-}
-
-</tbody>
-
-</table>
-
-</div>
-
-`;
-
-}
-
-
-function addPurchase(){
-
-let supplier=document.getElementById("purchaseSupplier").value.trim();
-
-let itemIndex=document.getElementById("purchaseItem").value;
-
-let qty=Number(document.getElementById("purchaseQty").value);
-
-let price=Number(document.getElementById("purchasePrice").value);
-
-if(!supplier){
-
-alert("اكتب اسم المورد");
-
-return;
-
-}
-
-if(itemIndex===""){
-
-alert("اختر الصنف");
-
-return;
-
-}
-
-if(qty<=0||price<=0){
-
-alert("أدخل كمية وسعر صحيحين");
-
-return;
-
-}
-
-let item=state.items[itemIndex];
-
-let total=qty*price;
-
-state.purchases.push({
-
-supplier,
-
-item:item.name,
-
-qty,
-
-price,
-
-total,
-
-date:today()
-
-});
-
-item.qty+=qty;
-
-item.purchase=price;
-
-save();
-
-render();
-
-}
-
-
-function deletePurchase(i){
-
-if(confirm("سيتم حذف العملية وخصم الكمية من المخزون. هل تريد المتابعة؟")){
-
-let purchase=state.purchases[i];
-
-let item=state.items.find(x=>x.name===purchase.item);
-
-if(item){
-
-item.qty-=Number(purchase.qty||0);
-
-if(item.qty<0)item.qty=0;
-
-}
-
-state.purchases.splice(i,1);
-
-save();
-
-render();
-
-}
-
-}
-
-
-/* =========================
-   المصروفات
-========================= */
-
-function expenses(){
-
-return `
-
-<h2>المصروفات</h2>
-
-<div class="panel">
-
-<div class="row">
-
-<input id="expenseName" placeholder="بيان المصروف">
-
-<input
-id="expenseAmount"
-type="number"
-placeholder="قيمة المصروف">
-
-<button
-class="btn"
-onclick="addExpense()">
-
-إضافة مصروف
-
-</button>
-
-</div>
-
-</div>
-
-<div class="panel">
-
-<table>
-
-<thead>
-
-<tr>
-
-<th>#</th>
-<th>البيان</th>
-<th>القيمة</th>
-<th>التاريخ</th>
-<th>حذف</th>
-
-</tr>
-
-</thead>
-
-<tbody>
-
-${state.expenses.map((x,i)=>`
-
-<tr>
-
-<td>${i+1}</td>
-
-<td>${x.name}</td>
-
-<td>${money(x.amount)}</td>
-
-<td>${x.date}</td>
-
-<td>
-
-<button
-class="btn danger"
-onclick="deleteExpense(${i})">
-
-حذف
-
-</button>
-
-</td>
-
-</tr>
-
-`).join("")||
-
-`<tr>
-<td colspan="5" class="empty">
-لا توجد مصروفات
-</td>
-</tr>`
-
-}
-
-</tbody>
-
-</table>
-
-</div>
-
-`;
-
-}
-
-
-function addExpense(){
-
-let name=document.getElementById("expenseName").value.trim();
-
-let amount=Number(document.getElementById("expenseAmount").value);
-
-if(!name||amount<=0){
-
-alert("أدخل بيان المصروف والقيمة");
-
-return;
-
-}
-
-state.expenses.push({
-
-name,
-amount,
-date:today()
-
-});
-
-save();
-
-render();
-
-}
-
-
-function deleteExpense(i){
-
-if(confirm("هل تريد حذف المصروف؟")){
-
-state.expenses.splice(i,1);
-
-save();
-
-render();
-
-}
-
-}
-
-
-/* =========================
-   التقارير
-========================= */
-
-function reports(){
-
-let sales=state.sales.reduce((a,x)=>a+Number(x.total||0),0);
-
-let purchases=state.purchases.reduce((a,x)=>a+Number(x.total||0),0);
-
-let expensesTotal=state.expenses.reduce((a,x)=>a+Number(x.amount||0),0);
-
-let profit=sales-purchases-expensesTotal;
-
-return `
-
-<h2>التقارير</h2>
-
-<div class="cards">
-
-<div class="card">
-<small>المبيعات</small>
-<b>${money(sales)}</b>
-</div>
-
-<div class="card">
-<small>المشتريات</small>
-<b>${money(purchases)}</b>
-</div>
-
-<div class="card">
-<small>المصروفات</small>
-<b>${money(expensesTotal)}</b>
-</div>
-
-<div class="card">
-<small>صافي الربح</small>
-<b>${money(profit)}</b>
-</div>
-
-</div>
-
-<div class="panel">
-
-<h2>ملخص النشاط</h2>
-
-<p>عدد فواتير المبيعات: <b>${state.sales.length}</b></p>
-
-<p>عدد فواتير المشتريات: <b>${state.purchases.length}</b></p>
-
-<p>عدد الأصناف: <b>${state.items.length}</b></p>
-
-<p>قيمة المخزون: <b>${money(stockValue())}</b></p>
-
-</div>
-
-`;
-
-}
-
-
-/* =========================
-   النسخ الاحتياطي
-========================= */
-
-function backup(){
-
-return `
-
-<h2>النسخ الاحتياطي</h2>
-
-<div class="panel">
-
-<p>
-
-يمكنك تحميل نسخة احتياطية من بيانات البرنامج والاحتفاظ بها.
-
-</p>
-
-<button
-class="btn success"
-onclick="downloadBackup()">
-
-تحميل نسخة احتياطية
-
-</button>
-
-</div>
-
-<div class="panel">
-
-<h2>استرجاع البيانات</h2>
-
-<input
-type="file"
-id="backupFile"
-accept=".json">
-
-<button
-class="btn"
-onclick="restoreBackup()">
-
-استرجاع النسخة
-
-</button>
-
-</div>
-
-`;
-
-}
-
-
-function downloadBackup(){
-
-let data={
-
-customers:state.customers,
-
-suppliers:state.suppliers,
-
-items:state.items,
-
-sales:state.sales,
-
-purchases:state.purchases,
-
-expenses:state.expenses
-
-};
-
-let blob=new Blob(
-
-[JSON.stringify(data,null,2)],
-
-{type:"application/json"}
-
-);
-
-let url=URL.createObjectURL(blob);
-
-let a=document.createElement("a");
-
-a.href=url;
-
-a.download="محاسبي_نسخة_احتياطية.json";
-
-a.click();
-
-URL.revokeObjectURL(url);
-
-}
-
-
-function restoreBackup(){
-
-let file=document.getElementById("backupFile").files[0];
-
-if(!file){
-
-alert("اختر ملف النسخة الاحتياطية أولًا");
-
-return;
-
-}
-
-let reader=new FileReader();
-
-reader.onload=function(e){
-
-try{
-
-let data=JSON.parse(e.target.result);
-
-state.customers=data.customers||[];
-
-state.suppliers=data.suppliers||[];
-
-state.items=data.items||[];
-
-state.sales=data.sales||[];
-
-state.purchases=data.purchases||[];
-
-state.expenses=data.expenses||[];
-
-save();
-
-render();
-
-alert("تم استرجاع البيانات بنجاح");
-
-}
-
-catch{
-
-alert("ملف النسخة الاحتياطية غير صالح");
-
-}
-
-};
-
-reader.readAsText(file);
-
-}
-
-
-/* =========================
-   تشغيل البرنامج
-========================= */
-
-function render(){
-
-nav();
-
-let s=state.section;
-
-let html="";
-
-if(s==="dashboard")html=dashboard();
-
-else if(s==="customers")html=customers();
-
-else if(s==="suppliers")html=suppliers();
-
-else if(s==="items")html=items();
-
-else if(s==="sales")html=sales();
-
-else if(s==="purchases")html=purchases();
-
-else if(s==="expenses")html=expenses();
-
-else if(s==="reports")html=reports();
-
-else if(s==="backup")html=backup();
-
-document.getElementById("app").innerHTML=html;
-
-}
-
-render();
-
-</script>
-
-</body>
-</html>
+(number(item.qty)*number(item.purchase
+                         
