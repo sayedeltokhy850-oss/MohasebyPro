@@ -3,48 +3,1751 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>محاسبي - النسخة الأولى</title>
+<title>محاسبي - النسخة الثانية</title>
+
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:Tahoma,Arial,sans-serif;background:#f5f7fb;color:#172033}
-header{background:#16213e;color:white;padding:18px 20px;display:flex;justify-content:space-between;align-items:center}
-header h1{margin:0;font-size:22px}.wrap{display:flex;min-height:calc(100vh - 68px)}
-nav{width:220px;background:#fff;border-left:1px solid #e6e9ef;padding:14px}
-nav button{width:100%;border:0;background:transparent;padding:13px;text-align:right;border-radius:8px;cursor:pointer;font-size:15px;margin-bottom:4px}
-nav button.active,nav button:hover{background:#eef2ff}
-main{flex:1;padding:22px;max-width:1250px}
-.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:22px}
-.card{background:white;border:1px solid #e7eaf0;border-radius:12px;padding:18px}.card small{color:#697386}.card b{display:block;font-size:25px;margin-top:8px}
-.panel{background:#fff;border:1px solid #e7eaf0;border-radius:12px;padding:18px;margin-bottom:18px}
-h2{margin-top:0}.row{display:flex;gap:10px;flex-wrap:wrap}
-input,select{padding:11px;border:1px solid #d7dce5;border-radius:7px;min-width:160px}
-.btn{border:0;border-radius:7px;padding:11px 16px;cursor:pointer;background:#243b73;color:white}
-.btn.secondary{background:#eef2ff;color:#243b73}
-table{width:100%;border-collapse:collapse;margin-top:14px}th,td{padding:11px;border-bottom:1px solid #eee;text-align:right}
-.empty{color:#777;padding:25px;text-align:center}
-@media(max-width:800px){nav{width:72px}nav button{font-size:0;text-align:center}nav button:before{content:"•";font-size:24px}.cards{grid-template-columns:repeat(2,1fr)}main{padding:12px}}
+*{box-sizing:border-box}
+
+body{
+margin:0;
+font-family:Tahoma,Arial,sans-serif;
+background:#f5f7fb;
+color:#172033
+}
+
+header{
+background:#16213e;
+color:white;
+padding:16px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:10px
+}
+
+header h1{
+margin:0;
+font-size:22px
+}
+
+header span{
+font-size:13px;
+opacity:.9
+}
+
+.wrap{
+display:flex;
+min-height:calc(100vh - 65px)
+}
+
+nav{
+width:220px;
+background:#fff;
+border-left:1px solid #e6e9ef;
+padding:12px
+}
+
+nav button{
+width:100%;
+border:0;
+background:transparent;
+padding:13px 10px;
+text-align:right;
+border-radius:8px;
+cursor:pointer;
+font-size:15px;
+margin-bottom:4px
+}
+
+nav button.active,
+nav button:hover{
+background:#eef2ff
+}
+
+main{
+flex:1;
+padding:20px;
+max-width:1400px
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:14px;
+margin-bottom:20px
+}
+
+.card{
+background:white;
+border:1px solid #e7eaf0;
+border-radius:12px;
+padding:18px
+}
+
+.card small{
+color:#697386
+}
+
+.card b{
+display:block;
+font-size:24px;
+margin-top:8px
+}
+
+.panel{
+background:#fff;
+border:1px solid #e7eaf0;
+border-radius:12px;
+padding:18px;
+margin-bottom:18px
+}
+
+h2{
+margin-top:0
+}
+
+.row{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+margin-bottom:10px
+}
+
+input,select{
+padding:11px;
+border:1px solid #d7dce5;
+border-radius:7px;
+min-width:150px;
+background:white
+}
+
+.btn{
+border:0;
+border-radius:7px;
+padding:11px 16px;
+cursor:pointer;
+background:#243b73;
+color:white
+}
+
+.btn.secondary{
+background:#eef2ff;
+color:#243b73
+}
+
+.btn.danger{
+background:#b42318;
+color:white
+}
+
+.btn.success{
+background:#16803c;
+color:white
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:14px
+}
+
+th,td{
+padding:10px;
+border-bottom:1px solid #eee;
+text-align:right
+}
+
+th{
+background:#f1f3f7
+}
+
+.empty{
+color:#777;
+padding:25px;
+text-align:center
+}
+
+.total-box{
+background:#eef2ff;
+border-radius:10px;
+padding:15px;
+margin-top:15px;
+font-size:18px
+}
+
+.badge{
+display:inline-block;
+padding:5px 9px;
+border-radius:20px;
+background:#eef2ff;
+font-size:12px
+}
+
+@media(max-width:800px){
+
+nav{
+width:72px
+}
+
+nav button{
+font-size:0;
+text-align:center
+}
+
+nav button:before{
+content:"•";
+font-size:24px
+}
+
+.cards{
+grid-template-columns:repeat(2,1fr)
+}
+
+main{
+padding:12px
+}
+
+table{
+font-size:13px
+}
+
+input,select{
+min-width:120px
+}
+
+}
 </style>
 </head>
+
 <body>
-<header><h1>محاسبي</h1><span>النسخة الأولى</span></header>
+
+<header>
+<h1>محاسبي</h1>
+<span>النسخة الثانية</span>
+</header>
+
 <div class="wrap">
+
 <nav id="nav"></nav>
+
 <main id="app"></main>
+
 </div>
+
 <script>
-const state={section:'dashboard',customers:JSON.parse(localStorage.getItem('customers')||'[]'),suppliers:JSON.parse(localStorage.getItem('suppliers')||'[]'),items:JSON.parse(localStorage.getItem('items')||'[]'),sales:JSON.parse(localStorage.getItem('sales')||'[]'),purchases:JSON.parse(localStorage.getItem('purchases')||'[]')};
-const menus=[['dashboard','لوحة التحكم'],['customers','العملاء'],['suppliers','الموردون'],['items','الأصناف'],['sales','المبيعات'],['purchases','المشتريات']];
-function save(){localStorage.setItem('customers',JSON.stringify(state.customers));localStorage.setItem('suppliers',JSON.stringify(state.suppliers));localStorage.setItem('items',JSON.stringify(state.items));localStorage.setItem('sales',JSON.stringify(state.sales));localStorage.setItem('purchases',JSON.stringify(state.purchases))}
-function nav(){document.getElementById('nav').innerHTML=menus.map(x=>`<button class="${state.section==x[0]?'active':''}" onclick="go('${x[0]}')">${x[1]}</button>`).join('')}
-function go(s){state.section=s;render()}
-function dashboard(){let sales=state.sales.reduce((a,x)=>a+Number(x.total||0),0), purchases=state.purchases.reduce((a,x)=>a+Number(x.total||0),0);return `<h2>لوحة التحكم</h2><div class="cards"><div class="card"><small>العملاء</small><b>${state.customers.length}</b></div><div class="card"><small>الموردون</small><b>${state.suppliers.length}</b></div><div class="card"><small>إجمالي المبيعات</small><b>${sales.toFixed(2)}</b></div><div class="card"><small>صافي المبيعات - المشتريات</small><b>${(sales-purchases).toFixed(2)}</b></div></div><div class="panel"><h2>نظرة سريعة</h2><p>هذه نسخة أولية تعمل محليًا على جهازك. البيانات تُحفظ في المتصفح.</p><p>الخطوة التالية: إضافة الفواتير التفصيلية، القيود اليومية، المخزون، التقارير، المستخدمين والنسخ الاحتياطي.</p></div>`}
-const labels={customers:['العملاء','اسم العميل','رقم الهاتف'],suppliers:['الموردون','اسم المورد','رقم الهاتف'],items:['الأصناف','اسم الصنف','السعر']};
-function master(type){let [title,a,b]=labels[type];let arr=state[type];return `<h2>${title}</h2><div class="panel"><div class="row"><input id="n" placeholder="${a}"><input id="v" placeholder="${b}"><button class="btn" onclick="addMaster('${type}')">إضافة</button></div></div><div class="panel"><table><thead><tr><th>#</th><th>${a}</th><th>${b}</th><th>حذف</th></tr></thead><tbody>${arr.map((x,i)=>`<tr><td>${i+1}</td><td>${x.name}</td><td>${x.value}</td><td><button class="btn secondary" onclick="delMaster('${type}',${i})">حذف</button></td></tr>`).join('')||'<tr><td colspan="4" class="empty">لا توجد بيانات</td></tr>'}</tbody></table></div>`}
-function addMaster(type){let n=document.getElementById('n').value.trim(),v=document.getElementById('v').value.trim();if(!n)return alert('اكتب الاسم أولًا');state[type].push({name:n,value:v});save();render()}
-function delMaster(type,i){state[type].splice(i,1);save();render()}
-function transactions(type){let isSale=type==='sales',title=isSale?'المبيعات':'المشتريات';let arr=state[type];return `<h2>${title}</h2><div class="panel"><div class="row"><input id="tn" placeholder="${isSale?'اسم العميل':'اسم المورد'}"><input id="tt" type="number" placeholder="الإجمالي"><button class="btn" onclick="addTx('${type}')">حفظ العملية</button></div></div><div class="panel"><table><thead><tr><th>#</th><th>الطرف</th><th>الإجمالي</th><th>التاريخ</th></tr></thead><tbody>${arr.map((x,i)=>`<tr><td>${i+1}</td><td>${x.name}</td><td>${Number(x.total).toFixed(2)}</td><td>${x.date}</td></tr>`).join('')||'<tr><td colspan="4" class="empty">لا توجد عمليات</td></tr>'}</tbody></table></div>`}
-function addTx(type){let n=document.getElementById('tn').value.trim(),t=Number(document.getElementById('tt').value);if(!n||!t)return alert('أدخل الطرف والإجمالي');state[type].push({name:n,total:t,date:new Date().toLocaleDateString('ar-EG')});save();render()}
-function render(){nav();let s=state.section;document.getElementById('app').innerHTML=s==='dashboard'?dashboard():['customers','suppliers','items'].includes(s)?master(s):transactions(s)}
+
+/* =========================
+   البيانات
+========================= */
+
+const state={
+
+section:"dashboard",
+
+customers:JSON.parse(localStorage.getItem("customers")||"[]"),
+
+suppliers:JSON.parse(localStorage.getItem("suppliers")||"[]"),
+
+items:JSON.parse(localStorage.getItem("items")||"[]"),
+
+sales:JSON.parse(localStorage.getItem("sales")||"[]"),
+
+purchases:JSON.parse(localStorage.getItem("purchases")||"[]"),
+
+expenses:JSON.parse(localStorage.getItem("expenses")||"[]")
+
+};
+
+
+/* =========================
+   الحفظ
+========================= */
+
+function save(){
+
+localStorage.setItem("customers",JSON.stringify(state.customers));
+
+localStorage.setItem("suppliers",JSON.stringify(state.suppliers));
+
+localStorage.setItem("items",JSON.stringify(state.items));
+
+localStorage.setItem("sales",JSON.stringify(state.sales));
+
+localStorage.setItem("purchases",JSON.stringify(state.purchases));
+
+localStorage.setItem("expenses",JSON.stringify(state.expenses"));
+
+}
+
+
+/* =========================
+   القوائم
+========================= */
+
+const menus=[
+
+["dashboard","🏠 لوحة التحكم"],
+
+["customers","👥 العملاء"],
+
+["suppliers","🚚 الموردون"],
+
+["items","📦 الأصناف"],
+
+["sales","💰 المبيعات"],
+
+["purchases","🛒 المشتريات"],
+
+["expenses","💸 المصروفات"],
+
+["reports","📊 التقارير"],
+
+["backup","💾 النسخ الاحتياطي"]
+
+];
+
+
+function nav(){
+
+document.getElementById("nav").innerHTML=
+
+menus.map(x=>`
+
+<button
+
+class="${state.section===x[0]?"active":""}"
+
+onclick="go('${x[0]}')">
+
+${x[1]}
+
+</button>
+
+`).join("");
+
+}
+
+
+function go(section){
+
+state.section=section;
+
 render();
+
+}
+
+
+/* =========================
+   أدوات
+========================= */
+
+function money(value){
+
+return Number(value||0).toFixed(2);
+
+}
+
+function today(){
+
+return new Date().toLocaleDateString("ar-EG");
+
+}
+
+
+/* =========================
+   لوحة التحكم
+========================= */
+
+function dashboard(){
+
+let sales=state.sales.reduce((a,x)=>a+Number(x.total||0),0);
+
+let purchases=state.purchases.reduce((a,x)=>a+Number(x.total||0),0);
+
+let expenses=state.expenses.reduce((a,x)=>a+Number(x.amount||0),0);
+
+let profit=sales-purchases-expenses;
+
+return `
+
+<h2>لوحة التحكم</h2>
+
+<div class="cards">
+
+<div class="card">
+<small>عدد العملاء</small>
+<b>${state.customers.length}</b>
+</div>
+
+<div class="card">
+<small>عدد الموردين</small>
+<b>${state.suppliers.length}</b>
+</div>
+
+<div class="card">
+<small>عدد الأصناف</small>
+<b>${state.items.length}</b>
+</div>
+
+<div class="card">
+<small>قيمة المخزون</small>
+<b>${money(stockValue())}</b>
+</div>
+
+<div class="card">
+<small>إجمالي المبيعات</small>
+<b>${money(sales)}</b>
+</div>
+
+<div class="card">
+<small>إجمالي المشتريات</small>
+<b>${money(purchases)}</b>
+</div>
+
+<div class="card">
+<small>المصروفات</small>
+<b>${money(expenses)}</b>
+</div>
+
+<div class="card">
+<small>صافي الربح</small>
+<b>${money(profit)}</b>
+</div>
+
+</div>
+
+<div class="panel">
+
+<h2>نظرة سريعة</h2>
+
+<p>تاريخ اليوم: <b>${today()}</b></p>
+
+<p>
+النظام يحفظ البيانات تلقائيًا داخل المتصفح.
+</p>
+
+<p>
+استخدم قائمة الأصناف لإضافة المنتجات والكميات،
+ثم استخدم المبيعات والمشتريات لتسجيل العمليات.
+</p>
+
+</div>
+
+`;
+
+}
+
+
+/* =========================
+   العملاء
+========================= */
+
+function customers(){
+
+return `
+
+<h2>العملاء</h2>
+
+<div class="panel">
+
+<div class="row">
+
+<input id="customerName" placeholder="اسم العميل">
+
+<input id="customerPhone" placeholder="رقم الهاتف">
+
+<input id="customerAddress" placeholder="العنوان">
+
+<button class="btn" onclick="addCustomer()">
+إضافة عميل
+</button>
+
+</div>
+
+</div>
+
+<div class="panel">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>#</th>
+<th>الاسم</th>
+<th>الهاتف</th>
+<th>العنوان</th>
+<th>حذف</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+${state.customers.map((x,i)=>`
+
+<tr>
+
+<td>${i+1}</td>
+
+<td>${x.name}</td>
+
+<td>${x.phone}</td>
+
+<td>${x.address}</td>
+
+<td>
+
+<button
+class="btn danger"
+onclick="deleteCustomer(${i})">
+
+حذف
+
+</button>
+
+</td>
+
+</tr>
+
+`).join("")||
+
+`<tr>
+<td colspan="5" class="empty">
+لا يوجد عملاء
+</td>
+</tr>`
+
+}
+
+</tbody>
+
+</table>
+
+</div>
+
+`;
+
+}
+
+
+function addCustomer(){
+
+let name=document.getElementById("customerName").value.trim();
+
+let phone=document.getElementById("customerPhone").value.trim();
+
+let address=document.getElementById("customerAddress").value.trim();
+
+if(!name){
+
+alert("اكتب اسم العميل");
+
+return;
+
+}
+
+state.customers.push({
+
+name,
+phone,
+address
+
+});
+
+save();
+
+render();
+
+}
+
+
+function deleteCustomer(i){
+
+if(confirm("هل تريد حذف العميل؟")){
+
+state.customers.splice(i,1);
+
+save();
+
+render();
+
+}
+
+}
+
+
+/* =========================
+   الموردون
+========================= */
+
+function suppliers(){
+
+return `
+
+<h2>الموردون</h2>
+
+<div class="panel">
+
+<div class="row">
+
+<input id="supplierName" placeholder="اسم المورد">
+
+<input id="supplierPhone" placeholder="رقم الهاتف">
+
+<input id="supplierAddress" placeholder="العنوان">
+
+<button class="btn" onclick="addSupplier()">
+
+إضافة مورد
+
+</button>
+
+</div>
+
+</div>
+
+<div class="panel">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>#</th>
+<th>الاسم</th>
+<th>الهاتف</th>
+<th>العنوان</th>
+<th>حذف</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+${state.suppliers.map((x,i)=>`
+
+<tr>
+
+<td>${i+1}</td>
+
+<td>${x.name}</td>
+
+<td>${x.phone}</td>
+
+<td>${x.address}</td>
+
+<td>
+
+<button
+class="btn danger"
+onclick="deleteSupplier(${i})">
+
+حذف
+
+</button>
+
+</td>
+
+</tr>
+
+`).join("")||
+
+`<tr>
+<td colspan="5" class="empty">
+لا يوجد موردون
+</td>
+</tr>`
+
+}
+
+</tbody>
+
+</table>
+
+</div>
+
+`;
+
+}
+
+
+function addSupplier(){
+
+let name=document.getElementById("supplierName").value.trim();
+
+let phone=document.getElementById("supplierPhone").value.trim();
+
+let address=document.getElementById("supplierAddress").value.trim();
+
+if(!name){
+
+alert("اكتب اسم المورد");
+
+return;
+
+}
+
+state.suppliers.push({
+
+name,
+phone,
+address
+
+});
+
+save();
+
+render();
+
+}
+
+
+function deleteSupplier(i){
+
+if(confirm("هل تريد حذف المورد؟")){
+
+state.suppliers.splice(i,1);
+
+save();
+
+render();
+
+}
+
+}
+
+
+/* =========================
+   الأصناف والمخزون
+========================= */
+
+function items(){
+
+return `
+
+<h2>الأصناف والمخزون</h2>
+
+<div class="panel">
+
+<div class="row">
+
+<input id="itemName" placeholder="اسم الصنف">
+
+<input id="itemCode" placeholder="كود الصنف">
+
+<input id="itemPrice" type="number" placeholder="سعر البيع">
+
+<input id="itemPurchase" type="number" placeholder="سعر الشراء">
+
+<input id="itemQty" type="number" placeholder="الكمية">
+
+<button class="btn" onclick="addItem()">
+
+إضافة صنف
+
+</button>
+
+</div>
+
+</div>
+
+<div class="panel">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>#</th>
+<th>الكود</th>
+<th>الصنف</th>
+<th>سعر البيع</th>
+<th>سعر الشراء</th>
+<th>الكمية</th>
+<th>القيمة</th>
+<th>حذف</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+${state.items.map((x,i)=>`
+
+<tr>
+
+<td>${i+1}</td>
+
+<td>${x.code}</td>
+
+<td>${x.name}</td>
+
+<td>${money(x.price)}</td>
+
+<td>${money(x.purchase)}</td>
+
+<td>${x.qty}</td>
+
+<td>${money(x.qty*x.purchase)}</td>
+
+<td>
+
+<button
+class="btn danger"
+onclick="deleteItem(${i})">
+
+حذف
+
+</button>
+
+</td>
+
+</tr>
+
+`).join("")||
+
+`<tr>
+<td colspan="8" class="empty">
+لا توجد أصناف
+</td>
+</tr>`
+
+}
+
+</tbody>
+
+</table>
+
+</div>
+
+`;
+
+}
+
+
+function addItem(){
+
+let name=document.getElementById("itemName").value.trim();
+
+let code=document.getElementById("itemCode").value.trim();
+
+let price=Number(document.getElementById("itemPrice").value);
+
+let purchase=Number(document.getElementById("itemPurchase").value);
+
+let qty=Number(document.getElementById("itemQty").value);
+
+if(!name){
+
+alert("اكتب اسم الصنف");
+
+return;
+
+}
+
+state.items.push({
+
+name,
+code,
+price,
+purchase,
+qty
+
+});
+
+save();
+
+render();
+
+}
+
+
+function deleteItem(i){
+
+if(confirm("هل تريد حذف الصنف؟")){
+
+state.items.splice(i,1);
+
+save();
+
+render();
+
+}
+
+}
+
+
+function stockValue(){
+
+return state.items.reduce(
+
+(total,item)=>
+
+total+
+
+(Number(item.qty)||0)*(Number(item.purchase)||0),
+
+0
+
+);
+
+}
+
+
+/* =========================
+   فاتورة المبيعات
+========================= */
+
+function sales(){
+
+return `
+
+<h2>فواتير المبيعات</h2>
+
+<div class="panel">
+
+<div class="row">
+
+<input id="saleCustomer" placeholder="اسم العميل">
+
+<select id="saleItem">
+
+<option value="">اختر الصنف</option>
+
+${state.items.map((x,i)=>`
+
+<option value="${i}">
+
+${x.name} - ${money(x.price)}
+
+</option>
+
+`).join("")}
+
+</select>
+
+<input
+id="saleQty"
+type="number"
+min="1"
+value="1"
+placeholder="الكمية">
+
+<input
+id="saleDiscount"
+type="number"
+value="0"
+placeholder="الخصم">
+
+<button
+class="btn success"
+onclick="addSale()">
+
+حفظ الفاتورة
+
+</button>
+
+</div>
+
+<div class="total-box">
+
+الإجمالي المتوقع:
+
+<b id="salePreview">0.00</b>
+
+</div>
+
+</div>
+
+<div class="panel">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>#</th>
+<th>العميل</th>
+<th>الصنف</th>
+<th>الكمية</th>
+<th>الإجمالي</th>
+<th>التاريخ</th>
+<th>حذف</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+${state.sales.map((x,i)=>`
+
+<tr>
+
+<td>${i+1}</td>
+
+<td>${x.customer}</td>
+
+<td>${x.item}</td>
+
+<td>${x.qty}</td>
+
+<td>${money(x.total)}</td>
+
+<td>${x.date}</td>
+
+<td>
+
+<button
+class="btn danger"
+onclick="deleteSale(${i})">
+
+حذف
+
+</button>
+
+</td>
+
+</tr>
+
+`).join("")||
+
+`<tr>
+<td colspan="7" class="empty">
+لا توجد فواتير مبيعات
+</td>
+</tr>`
+
+}
+
+</tbody>
+
+</table>
+
+</div>
+
+`;
+
+}
+
+
+function addSale(){
+
+let customer=document.getElementById("saleCustomer").value.trim();
+
+let itemIndex=document.getElementById("saleItem").value;
+
+let qty=Number(document.getElementById("saleQty").value);
+
+let discount=Number(document.getElementById("saleDiscount").value||0);
+
+if(!customer){
+
+alert("اكتب اسم العميل");
+
+return;
+
+}
+
+if(itemIndex===""){
+
+alert("اختر الصنف");
+
+return;
+
+}
+
+if(qty<=0){
+
+alert("أدخل كمية صحيحة");
+
+return;
+
+}
+
+let item=state.items[itemIndex];
+
+if(qty>Number(item.qty)){
+
+alert("الكمية المطلوبة أكبر من المخزون");
+
+return;
+
+}
+
+let total=(Number(item.price)*qty)-discount;
+
+if(total<0)total=0;
+
+state.sales.push({
+
+customer,
+
+item:item.name,
+
+qty,
+
+price:item.price,
+
+discount,
+
+total,
+
+date:today()
+
+});
+
+item.qty-=qty;
+
+save();
+
+render();
+
+}
+
+
+function deleteSale(i){
+
+if(confirm("سيتم حذف الفاتورة وإرجاع الكمية للمخزون. هل تريد المتابعة؟")){
+
+let sale=state.sales[i];
+
+let item=state.items.find(x=>x.name===sale.item);
+
+if(item){
+
+item.qty+=Number(sale.qty||0);
+
+}
+
+state.sales.splice(i,1);
+
+save();
+
+render();
+
+}
+
+}
+
+
+/* =========================
+   المشتريات
+========================= */
+
+function purchases(){
+
+return `
+
+<h2>فواتير المشتريات</h2>
+
+<div class="panel">
+
+<div class="row">
+
+<input id="purchaseSupplier" placeholder="اسم المورد">
+
+<select id="purchaseItem">
+
+<option value="">اختر الصنف</option>
+
+${state.items.map((x,i)=>`
+
+<option value="${i}">
+
+${x.name}
+
+</option>
+
+`).join("")}
+
+</select>
+
+<input
+id="purchaseQty"
+type="number"
+min="1"
+value="1"
+placeholder="الكمية">
+
+<input
+id="purchasePrice"
+type="number"
+placeholder="سعر الشراء">
+
+<button
+class="btn success"
+onclick="addPurchase()">
+
+حفظ فاتورة الشراء
+
+</button>
+
+</div>
+
+</div>
+
+<div class="panel">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>#</th>
+<th>المورد</th>
+<th>الصنف</th>
+<th>الكمية</th>
+<th>الإجمالي</th>
+<th>التاريخ</th>
+<th>حذف</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+${state.purchases.map((x,i)=>`
+
+<tr>
+
+<td>${i+1}</td>
+
+<td>${x.supplier}</td>
+
+<td>${x.item}</td>
+
+<td>${x.qty}</td>
+
+<td>${money(x.total)}</td>
+
+<td>${x.date}</td>
+
+<td>
+
+<button
+class="btn danger"
+onclick="deletePurchase(${i})">
+
+حذف
+
+</button>
+
+</td>
+
+</tr>
+
+`).join("")||
+
+`<tr>
+<td colspan="7" class="empty">
+لا توجد فواتير مشتريات
+</td>
+</tr>`
+
+}
+
+</tbody>
+
+</table>
+
+</div>
+
+`;
+
+}
+
+
+function addPurchase(){
+
+let supplier=document.getElementById("purchaseSupplier").value.trim();
+
+let itemIndex=document.getElementById("purchaseItem").value;
+
+let qty=Number(document.getElementById("purchaseQty").value);
+
+let price=Number(document.getElementById("purchasePrice").value);
+
+if(!supplier){
+
+alert("اكتب اسم المورد");
+
+return;
+
+}
+
+if(itemIndex===""){
+
+alert("اختر الصنف");
+
+return;
+
+}
+
+if(qty<=0||price<=0){
+
+alert("أدخل كمية وسعر صحيحين");
+
+return;
+
+}
+
+let item=state.items[itemIndex];
+
+let total=qty*price;
+
+state.purchases.push({
+
+supplier,
+
+item:item.name,
+
+qty,
+
+price,
+
+total,
+
+date:today()
+
+});
+
+item.qty+=qty;
+
+item.purchase=price;
+
+save();
+
+render();
+
+}
+
+
+function deletePurchase(i){
+
+if(confirm("سيتم حذف العملية وخصم الكمية من المخزون. هل تريد المتابعة؟")){
+
+let purchase=state.purchases[i];
+
+let item=state.items.find(x=>x.name===purchase.item);
+
+if(item){
+
+item.qty-=Number(purchase.qty||0);
+
+if(item.qty<0)item.qty=0;
+
+}
+
+state.purchases.splice(i,1);
+
+save();
+
+render();
+
+}
+
+}
+
+
+/* =========================
+   المصروفات
+========================= */
+
+function expenses(){
+
+return `
+
+<h2>المصروفات</h2>
+
+<div class="panel">
+
+<div class="row">
+
+<input id="expenseName" placeholder="بيان المصروف">
+
+<input
+id="expenseAmount"
+type="number"
+placeholder="قيمة المصروف">
+
+<button
+class="btn"
+onclick="addExpense()">
+
+إضافة مصروف
+
+</button>
+
+</div>
+
+</div>
+
+<div class="panel">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>#</th>
+<th>البيان</th>
+<th>القيمة</th>
+<th>التاريخ</th>
+<th>حذف</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+${state.expenses.map((x,i)=>`
+
+<tr>
+
+<td>${i+1}</td>
+
+<td>${x.name}</td>
+
+<td>${money(x.amount)}</td>
+
+<td>${x.date}</td>
+
+<td>
+
+<button
+class="btn danger"
+onclick="deleteExpense(${i})">
+
+حذف
+
+</button>
+
+</td>
+
+</tr>
+
+`).join("")||
+
+`<tr>
+<td colspan="5" class="empty">
+لا توجد مصروفات
+</td>
+</tr>`
+
+}
+
+</tbody>
+
+</table>
+
+</div>
+
+`;
+
+}
+
+
+function addExpense(){
+
+let name=document.getElementById("expenseName").value.trim();
+
+let amount=Number(document.getElementById("expenseAmount").value);
+
+if(!name||amount<=0){
+
+alert("أدخل بيان المصروف والقيمة");
+
+return;
+
+}
+
+state.expenses.push({
+
+name,
+amount,
+date:today()
+
+});
+
+save();
+
+render();
+
+}
+
+
+function deleteExpense(i){
+
+if(confirm("هل تريد حذف المصروف؟")){
+
+state.expenses.splice(i,1);
+
+save();
+
+render();
+
+}
+
+}
+
+
+/* =========================
+   التقارير
+========================= */
+
+function reports(){
+
+let sales=state.sales.reduce((a,x)=>a+Number(x.total||0),0);
+
+let purchases=state.purchases.reduce((a,x)=>a+Number(x.total||0),0);
+
+let expensesTotal=state.expenses.reduce((a,x)=>a+Number(x.amount||0),0);
+
+let profit=sales-purchases-expensesTotal;
+
+return `
+
+<h2>التقارير</h2>
+
+<div class="cards">
+
+<div class="card">
+<small>المبيعات</small>
+<b>${money(sales)}</b>
+</div>
+
+<div class="card">
+<small>المشتريات</small>
+<b>${money(purchases)}</b>
+</div>
+
+<div class="card">
+<small>المصروفات</small>
+<b>${money(expensesTotal)}</b>
+</div>
+
+<div class="card">
+<small>صافي الربح</small>
+<b>${money(profit)}</b>
+</div>
+
+</div>
+
+<div class="panel">
+
+<h2>ملخص النشاط</h2>
+
+<p>عدد فواتير المبيعات: <b>${state.sales.length}</b></p>
+
+<p>عدد فواتير المشتريات: <b>${state.purchases.length}</b></p>
+
+<p>عدد الأصناف: <b>${state.items.length}</b></p>
+
+<p>قيمة المخزون: <b>${money(stockValue())}</b></p>
+
+</div>
+
+`;
+
+}
+
+
+/* =========================
+   النسخ الاحتياطي
+========================= */
+
+function backup(){
+
+return `
+
+<h2>النسخ الاحتياطي</h2>
+
+<div class="panel">
+
+<p>
+
+يمكنك تحميل نسخة احتياطية من بيانات البرنامج والاحتفاظ بها.
+
+</p>
+
+<button
+class="btn success"
+onclick="downloadBackup()">
+
+تحميل نسخة احتياطية
+
+</button>
+
+</div>
+
+<div class="panel">
+
+<h2>استرجاع البيانات</h2>
+
+<input
+type="file"
+id="backupFile"
+accept=".json">
+
+<button
+class="btn"
+onclick="restoreBackup()">
+
+استرجاع النسخة
+
+</button>
+
+</div>
+
+`;
+
+}
+
+
+function downloadBackup(){
+
+let data={
+
+customers:state.customers,
+
+suppliers:state.suppliers,
+
+items:state.items,
+
+sales:state.sales,
+
+purchases:state.purchases,
+
+expenses:state.expenses
+
+};
+
+let blob=new Blob(
+
+[JSON.stringify(data,null,2)],
+
+{type:"application/json"}
+
+);
+
+let url=URL.createObjectURL(blob);
+
+let a=document.createElement("a");
+
+a.href=url;
+
+a.download="محاسبي_نسخة_احتياطية.json";
+
+a.click();
+
+URL.revokeObjectURL(url);
+
+}
+
+
+function restoreBackup(){
+
+let file=document.getElementById("backupFile").files[0];
+
+if(!file){
+
+alert("اختر ملف النسخة الاحتياطية أولًا");
+
+return;
+
+}
+
+let reader=new FileReader();
+
+reader.onload=function(e){
+
+try{
+
+let data=JSON.parse(e.target.result);
+
+state.customers=data.customers||[];
+
+state.suppliers=data.suppliers||[];
+
+state.items=data.items||[];
+
+state.sales=data.sales||[];
+
+state.purchases=data.purchases||[];
+
+state.expenses=data.expenses||[];
+
+save();
+
+render();
+
+alert("تم استرجاع البيانات بنجاح");
+
+}
+
+catch{
+
+alert("ملف النسخة الاحتياطية غير صالح");
+
+}
+
+};
+
+reader.readAsText(file);
+
+}
+
+
+/* =========================
+   تشغيل البرنامج
+========================= */
+
+function render(){
+
+nav();
+
+let s=state.section;
+
+let html="";
+
+if(s==="dashboard")html=dashboard();
+
+else if(s==="customers")html=customers();
+
+else if(s==="suppliers")html=suppliers();
+
+else if(s==="items")html=items();
+
+else if(s==="sales")html=sales();
+
+else if(s==="purchases")html=purchases();
+
+else if(s==="expenses")html=expenses();
+
+else if(s==="reports")html=reports();
+
+else if(s==="backup")html=backup();
+
+document.getElementById("app").innerHTML=html;
+
+}
+
+render();
+
 </script>
+
 </body>
 </html>
